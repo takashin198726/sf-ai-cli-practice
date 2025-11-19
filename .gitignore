@@ -1,0 +1,70 @@
+# ---------------------------------------------------------------------
+# Salesforce Cache & Local Configuration
+# ---------------------------------------------------------------------
+.sf/
+.sfdx/
+.localdevserver/
+deploy-options.json
+# 認証情報はGitに上げないための除外
+.alias
+server.key
+
+# ---------------------------------------------------------------------
+# IDE & Editor Directories
+# ---------------------------------------------------------------------
+# VS Codeの個人設定は除外（推奨設定は.vscode/extensions.json等で共有）
+.vscode/
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/settings.json
+!.vscode/tasks.json
+
+# LWC VSCode autocomplete
+**/lwc/jsconfig.json
+
+# ---------------------------------------------------------------------
+# Dependencies & Logs
+# ---------------------------------------------------------------------
+node_modules/
+package-lock.json # チームの方針によるが、ライブラリバージョン固定のためcommitする場合もある
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ---------------------------------------------------------------------
+# Testing & Code Quality
+# ---------------------------------------------------------------------
+coverage/
+.pmdCache
+.eslintcache
+analysis/
+
+# ---------------------------------------------------------------------
+# OS System Files
+# ---------------------------------------------------------------------
+# Mac
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ---------------------------------------------------------------------
+# Environment Variables (Security)
+# ---------------------------------------------------------------------
+.env
+.env.local
+
+# ---------------------------------------------------------------------
+# Python (Salesforce Functions / Data Scripts)
+# ---------------------------------------------------------------------
+**/__pycache__/
+**/.venv/
+**/venv/
+*.pyc
