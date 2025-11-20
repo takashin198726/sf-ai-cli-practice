@@ -17,14 +17,32 @@ jobs:
       - name: Install Salesforce CLI
         run: npm install --global @salesforce/cli
 
+      # プラグインを強制インストール
+      - name: Install Salesforce Code Analyzer Plugin
+        run: echo 'y' | sf plugins install @salesforce/sfdx-scanner@latest
       - name: Run Salesforce Code Analyzer
+        id: run-code-analyzer
         uses: forcedotcom/run-code-analyzer@v1
         with:
           run-command: run
           target: ./force-app
           outfile: results.html
-          # Severity 1 (重大なセキュリティ/バグ) があればCIを失敗させる
-          severity-threshold: 1
+          run-arguments: --normalize-severity
+
+      # 【修正3】カスタム合否判定ロジック (ロボットペイメント社方式) https://tech.robotpayment.co.jp/entry/2024/05/29/070000
+      - name: Check the outputs to determine whether to fail
+        if: always()
+        run: |
+          echo "Exit Code: ${{ steps.run-code-analyzer.outputs.exit-code }}"
+          echo "Total Violations: ${{ steps.run-code-analyzer.outputs.num-violations }}"
+          echo "Sev1 Violations: ${{ steps.run-code-analyzer.outputs.num-sev1-violations }}"
+
+          if [ "${{ steps.run-code-analyzer.outputs.exit-code }}" -gt 0 ] || \
+             [ "${{ steps.run-code-analyzer.outputs.num-sev1-violations }}" -gt 0 ] || \
+             [ "${{ steps.run-code-analyzer.outputs.num-violations }}" -gt 10 ]; then
+            echo "Error: Quality gate failed (Sev1 > 0 OR Total > 10)."
+            exit 1
+          fi
 
       - name: Upload Results
         uses: actions/upload-artifact@v4
