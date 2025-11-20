@@ -17,9 +17,10 @@ jobs:
       - name: Install Salesforce CLI
         run: npm install --global @salesforce/cli
 
-      # プラグインを強制インストール
+        # プラグインを強制インストール
       - name: Install Salesforce Code Analyzer Plugin
-        run: echo 'y' | sf plugins install @salesforce/sfdx-scanner@latest
+        run: echo "y" | sf plugins install @salesforce/sfdx-scanner@latest
+
       - name: Run Salesforce Code Analyzer
         id: run-code-analyzer
         uses: forcedotcom/run-code-analyzer@v1
@@ -27,7 +28,6 @@ jobs:
           run-command: run
           run-arguments: --normalize-severity --target ./force-app --outfile results.html
 
-      # 【修正3】カスタム合否判定ロジック (ロボットペイメント社方式) https://tech.robotpayment.co.jp/entry/2024/05/29/070000
       - name: Check the outputs to determine whether to fail
         if: always()
         run: |
