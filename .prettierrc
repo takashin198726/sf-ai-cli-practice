@@ -21,7 +21,6 @@
       "files": "**/*.cls",
       "options": {
         "parser": "apex",
-        "apexStandaloneParser": "built-in",
         "apexInsertFinalNewline": true
       }
     }
