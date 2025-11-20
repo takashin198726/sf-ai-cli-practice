@@ -1,0 +1,34 @@
+name: Salesforce Code Analyzer
+
+on:
+  pull_request:
+    paths:
+      - 'force-app/**'
+
+jobs:
+  sf-code-analyzer:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install Salesforce CLI
+        run: npm install --global @salesforce/cli
+
+      - name: Run Salesforce Code Analyzer
+        uses: forcedotcom/run-code-analyzer@v1
+        with:
+          run-command: run
+          target: ./force-app
+          outfile: results.html
+          # Severity 1 (重大なセキュリティ/バグ) があればCIを失敗させる
+          severity-threshold: 1
+
+      - name: Upload Results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: code-analyzer-results
+          path: results.html
