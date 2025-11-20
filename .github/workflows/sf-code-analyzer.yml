@@ -25,9 +25,7 @@ jobs:
         uses: forcedotcom/run-code-analyzer@v1
         with:
           run-command: run
-          target: ./force-app
-          outfile: results.html
-          run-arguments: --normalize-severity
+          run-arguments: --normalize-severity --target ./force-app --outfile results.html
 
       # 【修正3】カスタム合否判定ロジック (ロボットペイメント社方式) https://tech.robotpayment.co.jp/entry/2024/05/29/070000
       - name: Check the outputs to determine whether to fail
