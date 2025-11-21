@@ -3,6 +3,10 @@
     {
       "path": "force-app",
       "default": true
+    },
+    {
+      "path": "submodules/ApexBluePrint",
+      "default": false
     }
   ],
   "name": ".",
