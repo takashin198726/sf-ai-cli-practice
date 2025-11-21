@@ -1,0 +1,37 @@
+name: Validate Delta Changes
+
+on:
+  pull_request:
+    paths:
+      - 'force-app/**'
+
+jobs:
+  validate-delta:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install Salesforce CLI
+        run: npm install --global @salesforce/cli
+
+      - name: Install sfdx-git-delta
+        run: echo "y" | sf plugins install sfdx-git-delta
+
+      - name: Generate Delta Packages
+        run: |
+          mkdir changed-sources
+          sf sgd:source:delta --to "HEAD" --from "HEAD^" --output-dir changed-sources/ --generate-delta
+
+      - name: Validate Metadata (CheckOnly)
+        run: |
+          if [ -s changed-sources/package/package.xml ]; then
+            echo "Deploying delta changes..."
+            cat changed-sources/package/package.xml
+            # 認証設定が完了したら、以下のコメントアウトを外して実際に検証デプロイします
+            # sf project deploy start -x changed-sources/package/package.xml --dry-run
+          else
+            echo "No metadata changes found."
+          fi
