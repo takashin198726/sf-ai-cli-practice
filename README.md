@@ -135,4 +135,4 @@ orchestrator.create();
 
 - [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
 - [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [ApexBluePrint Repository](https://github.com/ntotten/ApexBluePrint)
+- [ApexBluePrint Repository](https://github.com/krile136/ApexBlueprint)
