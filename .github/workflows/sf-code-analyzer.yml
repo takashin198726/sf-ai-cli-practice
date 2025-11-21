@@ -17,7 +17,7 @@ jobs:
       - name: Install Salesforce CLI
         run: npm install --global @salesforce/cli
 
-        # プラグインを強制インストール
+      # プラグインを強制インストール
       - name: Install Salesforce Code Analyzer Plugin
         run: echo "y" | sf plugins install @salesforce/sfdx-scanner@latest
 
@@ -26,6 +26,7 @@ jobs:
         uses: forcedotcom/run-code-analyzer@v1
         with:
           run-command: run
+          # targetやoutfileは run-arguments に含める必要がある
           run-arguments: --normalize-severity --target ./force-app --outfile results.html
 
       - name: Check the outputs to determine whether to fail
@@ -35,6 +36,9 @@ jobs:
           echo "Total Violations: ${{ steps.run-code-analyzer.outputs.num-violations }}"
           echo "Sev1 Violations: ${{ steps.run-code-analyzer.outputs.num-sev1-violations }}"
 
+          # 1. 実行エラー (exit-code > 0)
+          # 2. 重大度1の違反あり (Sev1 > 0)
+          # 3. 違反総数が10件超 (Total > 10) - 記事参考のキャップ
           if [ "${{ steps.run-code-analyzer.outputs.exit-code }}" -gt 0 ] || \
              [ "${{ steps.run-code-analyzer.outputs.num-sev1-violations }}" -gt 0 ] || \
              [ "${{ steps.run-code-analyzer.outputs.num-violations }}" -gt 10 ]; then
@@ -42,9 +46,4 @@ jobs:
             exit 1
           fi
 
-      - name: Upload Results
-        uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: code-analyzer-results
-          path: results.html
+      # 重複していた Upload Results ステップを削除しました
