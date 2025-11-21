@@ -1,0 +1,3 @@
+[submodule "submodules/ApexBluePrint"]
+	path = submodules/ApexBluePrint
+	url = https://github.com/krile136/ApexBluePrint.git
