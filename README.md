@@ -100,8 +100,18 @@ sf project deploy start --manifest manifest/package.xml
 サブモジュール submodules/ApexBluePrint を活用し、テストコード内で簡潔にデータを作成します。
 
 ```java
-// 例: 取引先と関連する商談を同時に作成
-SBluePrint.create(new Account(Name='Test Acc'), new Opportunity(Name='Test Opp'));
+// 例: 取引先と関連する商談を同時に作成 (SOrchestratorを使用)
+SOrchestrator orchestrator = SOrchestrator.start()
+    .add(
+        SBluePrint.of(Account.class)
+            .set("Name", "Test Acc")
+            .withChildren(
+                SBluePrint.of(Opportunity.class)
+                    .set("Name", "Test Opp")
+            )
+    );
+orchestrator.create();
+
 ```
 
 ## 🤖 CI/CD Pipelines (GitHub Actions)

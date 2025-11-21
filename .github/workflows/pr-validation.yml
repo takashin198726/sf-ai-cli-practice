@@ -23,7 +23,7 @@ jobs:
       - name: Generate Delta Packages
         run: |
           mkdir changed-sources
-          sf sgd:source:delta --to "HEAD" --from "HEAD^" --output changed-sources/ --generate-delta
+          sf sgd:source:delta --to "HEAD" --from "HEAD^" --output-dir changed-sources/ --generate-delta
 
       - name: Validate Metadata (CheckOnly)
         run: |
