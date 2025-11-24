@@ -57,4 +57,5 @@ await testData.cleanup();
 
 ## 参考資料
 
-- [実装ガイド](../guides/TESTING.md)
+- [テスト戦略](../architecture/TESTING_STRATEGY.md)
+- [セットアップガイド](../guides/SETUP.md)

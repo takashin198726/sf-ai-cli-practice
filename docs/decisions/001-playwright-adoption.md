@@ -50,4 +50,5 @@ Playwrightを採用
 ## 参考資料
 
 - [Playwright公式ドキュメント](https://playwright.dev/)
-- [実装レポート](../guides/TESTING.md)
+- [テスト戦略](../architecture/TESTING_STRATEGY.md)
+- [セットアップガイド](../guides/SETUP.md)
