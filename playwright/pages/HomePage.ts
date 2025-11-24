@@ -53,22 +53,24 @@ export class BasePage {
    * トースト通知の確認（成功/エラー）
    * Salesforceの操作後に表示される通知を検証
    */
-  async waitForToast(type: 'success' | 'error' | 'warning', message?: string) {
+    async waitForToast(type: 'success' | 'error' | 'warning', message?: string) {
     const toastLocator = this.page.locator('.slds-notify--toast');
     await toastLocator.waitFor({ state: 'visible', timeout: 10000 });
     
     // トーストのタイプを確認
     if (type === 'success') {
-      await expect(toastLocator).toHaveClass(/slds-theme--success/);
+        await expect(toastLocator).toHaveClass(/slds-theme--success/);
     } else if (type === 'error') {
-      await expect(toastLocator).toHaveClass(/slds-theme--error/);
+        await expect(toastLocator).toHaveClass(/slds-theme--error/);
+    } else if (type === 'warning') {
+        await expect(toastLocator).toHaveClass(/slds-theme_warning/);
     }
     
     // メッセージ内容の確認（オプション）
     if (message) {
-      await expect(toastLocator).toContainText(message);
+        await expect(toastLocator).toContainText(message);
     }
-  }
+    }
 
   /**
    * グローバル検索を実行

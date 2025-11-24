@@ -42,50 +42,45 @@ export class SalesforceAPI {
     }
   }
 
-  /**
-   * SOQLクエリを実行
-   * @param soql - SOQLクエリ文字列
-   * @returns クエリ結果
-   * 
-   * @example
-   * ```typescript
-   * const result = await api.query('SELECT Id, Name FROM Account LIMIT 10');
-   * console.log(result.records);
-   * ```
-   */
-  async query(soql: string): Promise<any> {
-    const url = `${this.baseURL}/services/data/${this.apiVersion}/query`;
-    
-    try {
-      const response = await fetch(url, {
-        method: 'GET',
-        headers: {
-          'Authorization': `Bearer ${this.accessToken}`,
-          'Content-Type': 'application/json',
-        },
-        // URLパラメータとしてSOQLを送信
-      });
+/**
+ * SOQLクエリを実行
+ * @param soql - SOQLクエリ文字列（注意: 信頼できる静的な文字列のみを使用すること）
+ * @returns クエリ結果
+ * 
+ * @example
+ * ```typescript
+ * const result = await api.query('SELECT Id, Name FROM Account LIMIT 10');
+ * console.log(result.records);
+ * ```
+ * 
+ * @security
+ * このメソッドはSOQL文字列をそのまま実行します。
+ * テスト用途のため動的な値は最小限にし、可能な限り静的なクエリを使用してください。
+ */
+ async query(soql: string): Promise<any> {
+  const url = `${this.baseURL}/services/data/${this.apiVersion}/query`;
+  
+  try {
+    // 実際のリクエストURL構築
+    const queryUrl = `${url}?q=${encodeURIComponent(soql)}`;
+    const response = await fetch(queryUrl, {
+      method: 'GET',
+      headers: {
+        'Authorization': `Bearer ${this.accessToken}`,
+        'Content-Type': 'application/json',
+      },
+    });
 
-      // 実際のリクエストURL構築
-      const queryUrl = `${url}?q=${encodeURIComponent(soql)}`;
-      const actualResponse = await fetch(queryUrl, {
-        method: 'GET',
-        headers: {
-          'Authorization': `Bearer ${this.accessToken}`,
-          'Content-Type': 'application/json',
-        },
-      });
-
-      if (!actualResponse.ok) {
-        const errorText = await actualResponse.text();
-        throw new Error(`SOQL query failed (${actualResponse.status}): ${errorText}`);
-      }
-
-      return await actualResponse.json();
-    } catch (error) {
-      throw new Error(`Failed to execute SOQL query: ${error}`);
+    if (!response.ok) {
+      const errorText = await response.text();
+      throw new Error(`SOQL query failed (${response.status}): ${errorText}`);
     }
+
+    return await response.json();
+  } catch (error) {
+    throw new Error(`Failed to execute SOQL query: ${error}`);
   }
+}
 
   /**
    * レコードを作成
@@ -252,18 +247,22 @@ export class SalesforceAPI {
     await Promise.all(deletePromises);
   }
 
-  /**
-   * レコード数をカウント
-   * @param objectType - オブジェクト種別
-   * @param whereClause - WHERE句（オプション）
-   * @returns レコード数
-   * 
-   * @example
-   * ```typescript
-   * const count = await api.countRecords('Account', "Industry = 'Technology'");
-   * console.log(`Technology accounts: ${count}`);
-   * ```
-   */
+/**
+ * レコード数をカウント
+ * @param objectType - オブジェクト種別
+ * @param whereClause - WHERE句（オプション）※信頼できる静的な文字列のみを使用すること
+ * @returns レコード数
+ * 
+ * @example
+ * ```typescript
+ * const count = await api.countRecords('Account', "Industry = 'Technology'");
+ * console.log(`Technology accounts: ${count}`);
+ * ```
+ * 
+ * @security
+ * whereClause パラメータはそのままSOQLに埋め込まれます。
+ * テスト用途のため、信頼できる静的な文字列のみを渡してください。
+ */
   async countRecords(objectType: string, whereClause?: string): Promise<number> {
     let soql = `SELECT COUNT() FROM ${objectType}`;
     if (whereClause) {

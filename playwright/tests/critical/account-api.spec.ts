@@ -204,21 +204,19 @@ test.describe('Error Handling Tests @smoke', () => {
   });
 
   test('should handle deletion of non-existent record', async () => {
-    // 存在しないIDで削除を試みる（エラーにならずに処理される）
-    await expect(
-      api.deleteRecord('Account', '001000000000000AAA')
-    ).resolves.not.toThrow();
-  });
+  // 存在しないIDで削除を試みる（エラーにならずに処理される）
+  await expect(
+    api.deleteRecord('Account', '001000000000000AAA')
+  ).resolves.toBeUndefined();
+});
 
-  test('should create and immediately verify record', async () => {
-    const account = await testData.createTestAccount('Immediate Test');
-    
-    // 作成直後にクエリで確認
-    const result = await api.query(
-      `SELECT Id, Name FROM Account WHERE Id = '${account.id}'`
-    );
-    
-    expect(result.records.length).toBe(1);
-    expect(result.records[0].Name).toBe('Immediate Test');
-  });
+test('should create and immediately verify record', async () => {
+  const account = await testData.createTestAccount('Immediate Test');
+  
+  // getRecordメソッドを使用する方が安全
+  const record = await api.getRecord('Account', account.id, ['Id', 'Name']);
+  
+  expect(record.Id).toBe(account.id);
+  expect(record.Name).toBe('Immediate Test');
+});
 });
