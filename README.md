@@ -136,3 +136,89 @@ orchestrator.create();
 - [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
 - [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
 - [ApexBluePrint Repository](https://github.com/krile136/ApexBlueprint)
+
+## E2Eテスト
+
+### セットアップ
+
+```bash
+npm install
+npx playwright install chromium
+
+# 環境変数設定
+cp .env.example .env
+# .envを編集してSF_BASE_URLを設定
+```
+
+### テスト実行
+
+```bash
+# スモークテスト（2-3分）
+npm run test:smoke
+
+# クリティカルテスト（1-2分）
+npm run test:critical
+
+# 開発モード（VRT除外、3-5分）
+npm run test:dev
+
+# Push前チェック（自動実行）
+npm run test:pre-push
+
+# 全テスト（10-15分）
+npm run test:e2e
+```
+
+### アーキテクチャ
+
+- **Page Object Model**: 保守性向上
+- **API統合**: 82%高速化達成
+- **自動クリーンアップ**: ゴミデータゼロ
+- **並列実行**: 3-5倍高速
+
+### パフォーマンス
+
+| 指標     | Before | After | 改善率  |
+| -------- | ------ | ----- | ------- |
+| 実行時間 | 52.3秒 | 9.4秒 | 82%短縮 |
+| 成功率   | 56%    | 100%  | 完全    |
+
+詳細は[テスト戦略ドキュメント](docs/architecture/TESTING_STRATEGY.md)を参照。
+
+## ドキュメント
+
+- [アーキテクチャ](docs/architecture/)
+- [セットアップガイド](docs/guides/SETUP.md)
+- [テスト戦略](docs/architecture/TESTING_STRATEGY.md)
+- [ADR](docs/decisions/)
+
+## 開発ワークフロー
+
+### ブランチ戦略
+
+```
+main (本番)
+├── develop (開発) ※現在未使用
+├── feature/xxx (機能開発)
+├── chore/xxx (雑務)
+└── fix/xxx (バグ修正)
+```
+
+### コミット規約
+
+Conventional Commits + Commitlintを使用：
+
+```
+feat: 新機能
+fix: バグ修正
+chore: 雑務
+docs: ドキュメント
+test: テスト
+refactor: リファクタリング
+```
+
+### 品質ゲート
+
+- Pre-commit: Prettier + ESLint
+- Pre-push: Playwrightクリティカルテスト
+- PR: 全テスト + CodeRabbitレビュー

@@ -78,3 +78,13 @@ $RECYCLE.BIN/
 playwright/.auth/
 playwright-report/
 test-results/
+
+# Claude Code
+.claude/
+.claude-cache/
+claude-code.log
+
+# Temporary files
+*.tmp
+tmp/
+temp/

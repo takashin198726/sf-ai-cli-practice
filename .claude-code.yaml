@@ -1,0 +1,59 @@
+project:
+  name: 'sf-ai-cli-practice'
+  description: 'Salesforce E2E Testing Framework with Playwright'
+
+context:
+  include:
+    - 'force-app/**/*.cls'
+    - 'force-app/**/*.js'
+    - 'playwright/**/*.ts'
+    - 'docs/**/*.md'
+    - '*.md'
+  exclude:
+    - 'node_modules/**'
+    - 'playwright/test-results/**'
+    - 'playwright-report/**'
+    - '.sfdx/**'
+    - '.sf/**'
+    - 'test-results/**'
+
+rules:
+  - name: 'apex-best-practices'
+    description: 'Apexのベストプラクティスに従う'
+    checks:
+      - 'ループ内でのSOQL/DML禁止'
+      - 'with sharing必須'
+      - 'CRUD/FLS確認'
+      - 'ApexBluePrintを使用したテストデータ作成'
+
+  - name: 'playwright-patterns'
+    description: 'Playwrightのベストプラクティス'
+    checks:
+      - 'Page Object Model使用'
+      - 'API優先のデータセットアップ'
+      - "waitForLoadState('domcontentloaded')使用"
+      - 'Shadow DOM対応'
+
+  - name: 'test-data-isolation'
+    description: 'テストデータの分離'
+    checks:
+      - 'timestamp付きユニークデータ'
+      - '自動クリーンアップ必須'
+      - '並列実行対応'
+
+workflows:
+  code_review:
+    description: 'コードレビューワークフロー'
+    steps:
+      - check: 'Salesforceガバナンス制限'
+      - check: 'セキュリティ（SOQL injection等）'
+      - check: 'テスト戦略'
+      - suggest: '改善提案'
+
+  test_generation:
+    description: 'テスト生成ワークフロー'
+    steps:
+      - analyze: 'クラス構造分析'
+      - generate: 'Apexテスト（ApexBluePrint使用）'
+      - generate: 'E2Eテスト（Playwright使用）'
+      - validate: 'テストカバレッジ確認'
