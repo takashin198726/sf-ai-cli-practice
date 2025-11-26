@@ -80,7 +80,7 @@ playwright-report/
 test-results/
 
 # Claude Code
-.claude/
+# .claude/
 .claude-cache/
 claude-code.log
 
@@ -88,3 +88,6 @@ claude-code.log
 *.tmp
 tmp/
 temp/
+
+# Agent Workspaces
+ws-*/

@@ -1,4 +1,4 @@
-# ADR 001: Playwright採用
+# ADR 001: Playwright 採用
 
 ## Status
 
@@ -6,7 +6,7 @@ Accepted
 
 ## Context
 
-Salesforce LightningのE2Eテストフレームワークを選定する必要があった。
+Salesforce Lightning の E2E テストフレームワークを選定する必要があった。
 
 ### 検討した選択肢
 
@@ -16,17 +16,17 @@ Salesforce LightningのE2Eテストフレームワークを選定する必要が
 
 ## Decision
 
-Playwrightを採用
+Playwright を採用
 
 ## Rationale
 
-### Playwrightの優位性
+### Playwright の優位性
 
-- Shadow DOM自動貫通（Salesforce LWC対応）
-- 高速実行（Chromium CDP直接制御）
+- Shadow DOM 自動貫通（Salesforce LWC 対応）
+- 高速実行（Chromium CDP 直接制御）
 - 並列実行対応
-- Visual Regression Testing内蔵
-- TypeScript完全サポート
+- Visual Regression Testing 内蔵
+- TypeScript 完全サポート
 
 ### 実績
 
@@ -45,10 +45,10 @@ Playwrightを採用
 ### Negative
 
 - チーム学習コスト
-- 既存Seleniumテストからの移行コスト
+- 既存 Selenium テストからの移行コスト
 
 ## 参考資料
 
-- [Playwright公式ドキュメント](https://playwright.dev/)
+- [Playwright 公式ドキュメント](https://playwright.dev/)
 - [テスト戦略](../architecture/TESTING_STRATEGY.md)
 - [セットアップガイド](../guides/SETUP.md)

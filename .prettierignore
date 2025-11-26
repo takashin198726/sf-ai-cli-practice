@@ -10,3 +10,4 @@ force-app/main/default/workflows/
 force-app/main/default/staticresources/
 submodules/
 *.xml
+ws-*/

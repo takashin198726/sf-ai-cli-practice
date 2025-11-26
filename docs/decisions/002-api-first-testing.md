@@ -1,4 +1,4 @@
-# ADR 002: API優先テスト戦略
+# ADR 002: API 優先テスト戦略
 
 ## Status
 
@@ -6,24 +6,24 @@ Accepted
 
 ## Context
 
-E2Eテストのデータセットアップに時間がかかっていた。
+E2E テストのデータセットアップに時間がかかっていた。
 
 ## Decision
 
-API優先のテスト戦略を採用
+API 優先のテスト戦略を採用
 
 ## Rationale
 
-### Before（UIのみ）
+### Before（UI のみ）
 
-- データ作成: 10-15秒
+- データ作成: 10-15 秒
 - 不安定: ネットワーク遅延で失敗
 - 並列実行不可: データ競合
 
-### After（API優先）
+### After（API 優先）
 
-- データ作成: 1-2秒（82%短縮）
-- 安定: REST API直接制御
+- データ作成: 1-2 秒（82%短縮）
+- 安定: REST API 直接制御
 - 並列実行可能: データ分離
 
 ### 実装パターン
@@ -52,8 +52,8 @@ await testData.cleanup();
 
 ### Negative
 
-- API理解が必要
-- SalesforceAPI.tsの保守
+- API 理解が必要
+- SalesforceAPI.ts の保守
 
 ## 参考資料
 

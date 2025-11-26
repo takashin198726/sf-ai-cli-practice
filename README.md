@@ -1,20 +1,21 @@
 # Salesforce AI CLI Practice
 
-Salesforce開発における **モダンなCI/CDパイプライン** と **AI活用** を実践するためのリポジトリです。
-Salesforce CLI (sfコマンド) を使用した基本的なソースコード管理に加え、ガバナンス、品質担保、テスト効率化、そしてAIレビューを統合した高度な開発環境を提供します。
+Salesforce 開発における **モダンな CI/CD パイプライン** と **AI 活用** を実践するためのリポジトリです。
+Salesforce CLI (sf コマンド) を使用した基本的なソースコード管理に加え、ガバナンス、品質担保、テスト効率化、そして AI レビューを統合した高度な開発環境を提供します。
 
 ## 🚀 Tech Stack
 
 このプロジェクトには、以下のツール・ライブラリが導入されています。
 
-| Category       | Tool                   | Description                                                                              |
-| :------------- | :--------------------- | :--------------------------------------------------------------------------------------- |
-| **AI Review**  | **CodeRabbit**         | 日本語によるAIコードレビュー。Salesforceのベストプラクティスとセキュリティを監視します。 |
-| **Linter**     | **SF Code Analyzer**   | PMD / ESLint / RetireJS を統合した静的解析ツール。GitHub Actionsで自動実行されます。     |
-| **Formatter**  | **Prettier**           | コードスタイルの自動整形。`lint-staged` によりコミット時に強制適用されます。             |
-| **Testing**    | **ApexBluePrint**      | テストデータ生成ライブラリ（Data Factory）。複雑な関連データを1行で作成可能です。        |
-| **CI/CD**      | **sfdx-git-delta**     | 差分デプロイメントツール。変更されたメタデータのみを抽出してデプロイ・テストします。     |
-| **Governance** | **Husky / Commitlint** | Gitフックとコミットメッセージの規約（Conventional Commits）を強制します。                |
+| Category            | Tool                   | Description                                                                                 |
+| :------------------ | :--------------------- | :------------------------------------------------------------------------------------------ |
+| **Version Control** | **Jujutsu (jj)**       | ローカル開発用の次世代バージョン管理ツール。Git と共存し、柔軟な履歴編集が可能。            |
+| **AI Review**       | **CodeRabbit**         | 日本語による AI コードレビュー。Salesforce のベストプラクティスとセキュリティを監視します。 |
+| **Linter**          | **SF Code Analyzer**   | PMD / ESLint / RetireJS を統合した静的解析ツール。GitHub Actions で自動実行されます。       |
+| **Formatter**       | **Prettier**           | コードスタイルの自動整形。`lint-staged` によりコミット時に強制適用されます。                |
+| **Testing**         | **ApexBluePrint**      | テストデータ生成ライブラリ（Data Factory）。複雑な関連データを 1 行で作成可能です。         |
+| **CI/CD**           | **sfdx-git-delta**     | 差分デプロイメントツール。変更されたメタデータのみを抽出してデプロイ・テストします。        |
+| **Governance**      | **Husky / Commitlint** | Git フックとコミットメッセージの規約（Conventional Commits）を強制します。                  |
 
 ## 📦 前提条件 (Prerequisites)
 
@@ -24,8 +25,9 @@ Salesforce CLI (sfコマンド) を使用した基本的なソースコード管
 - [Salesforce CLI](https://developer.salesforce.com/tools/salesforcecli)
 - [Salesforce Extension Pack (VS Code Extension)](https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode)
 - [Git](https://git-scm.com/)
+- [Jujutsu (jj)](https://martinvonz.github.io/jj/) - **推奨** ローカル開発用バージョン管理ツール
 - **Node.js (v18 or later)** - 開発用ライブラリの実行に必要
-- **Java (v11 or later)** - Prettier (Apexパーサー) の高速化に必要
+- **Java (v11 or later)** - Prettier (Apex パーサー) の高速化に必要
 
 ## 🚀 セットアップ手順 (Getting Started)
 
@@ -44,7 +46,7 @@ git submodule init
 git submodule update
 ```
 
-### 2. Salesforce組織への接続
+### 2. Salesforce 組織への接続
 
 開発対象の組織（Sandbox, Dev Org, または Dev Hub）へログインします。
 
@@ -67,7 +69,7 @@ sf org list
 
 ### フォーマットと静的解析
 
-VS Codeの設定により、保存時に自動整形されます。手動実行も可能です。
+VS Code の設定により、保存時に自動整形されます。手動実行も可能です。
 
 ```bash
 # Prettierの手動実行
@@ -123,11 +125,11 @@ orchestrator.create();
 
 ## 📂 ディレクトリ構造
 
-- **force-app/** : Salesforceのメインソースコード（Apex, LWC, Objectsなど）
+- **force-app/** : Salesforce のメインソースコード（Apex, LWC, Objects など）
 - **manifest/** : 取得・デプロイ対象を定義する package.xml
-- **scripts/** : データロードや匿名Apex実行用のスクリプト
-- **submodules/** : 外部ライブラリ（ApexBluePrintなど）
-- **.husky/** : Gitフックの設定ファイル
+- **scripts/** : データロードや匿名 Apex 実行用のスクリプト
+- **submodules/** : 外部ライブラリ（ApexBluePrint など）
+- **.husky/** : Git フックの設定ファイル
 - **.github/** : GitHub Actions ワークフロー定義
 - **sfdx-project.json** : プロジェクト定義ファイル
 
@@ -137,7 +139,7 @@ orchestrator.create();
 - [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
 - [ApexBluePrint Repository](https://github.com/krile136/ApexBlueprint)
 
-## E2Eテスト
+## E2E テスト
 
 ### セットアップ
 
@@ -172,16 +174,16 @@ npm run test:e2e
 ### アーキテクチャ
 
 - **Page Object Model**: 保守性向上
-- **API統合**: 82%高速化達成
+- **API 統合**: 82%高速化達成
 - **自動クリーンアップ**: ゴミデータゼロ
-- **並列実行**: 3-5倍高速
+- **並列実行**: 3-5 倍高速
 
 ### パフォーマンス
 
-| 指標     | Before | After | 改善率  |
-| -------- | ------ | ----- | ------- |
-| 実行時間 | 52.3秒 | 9.4秒 | 82%短縮 |
-| 成功率   | 56%    | 100%  | 完全    |
+| 指標     | Before  | After  | 改善率  |
+| -------- | ------- | ------ | ------- |
+| 実行時間 | 52.3 秒 | 9.4 秒 | 82%短縮 |
+| 成功率   | 56%     | 100%   | 完全    |
 
 詳細は[テスト戦略ドキュメント](docs/architecture/TESTING_STRATEGY.md)を参照。
 
@@ -190,7 +192,53 @@ npm run test:e2e
 - [アーキテクチャ](docs/architecture/)
 - [セットアップガイド](docs/guides/SETUP.md)
 - [テスト戦略](docs/architecture/TESTING_STRATEGY.md)
+- [Jujutsu ワークフロー](docs/jujutsu-workflow.md)
 - [ADR](docs/decisions/)
+
+## バージョン管理 (Version Control)
+
+このプロジェクトでは、ローカル開発に **Jujutsu (jj)** を使用し、リモートリポジトリは **GitHub (Git)** を使用するハイブリッド運用を推奨しています。
+
+### Jujutsu の利点
+
+- **柔軟な履歴編集**: コミット後でも簡単に履歴を整理
+- **複数変更の同時作業**: AI ツールで複数のアプローチを試して比較・選択
+- **優れたコンフリクト解決**: 3-way マージで競合解決が容易
+- **Git 完全互換**: GitHub とシームレスに連携
+
+### 初回セットアップ (Jujutsu)
+
+```bash
+# Jujutsuのインストール (Homebrewの場合)
+brew install jj
+
+# ユーザー情報の設定
+jj config set --user user.name "Your Name"
+jj config set --user user.email "your.email@example.com"
+
+# 既存のGitリポジトリと統合（既に設定済み）
+# jj git init --colocate
+```
+
+### 基本的な使い方
+
+```bash
+# 状態確認
+jj status
+
+# 新しい変更を開始
+jj new -m "feat: 新機能の実装"
+
+# 変更履歴を表示
+jj log
+
+# GitHubへプッシュ
+jj git push --branch feature-branch
+```
+
+詳細は[Jujutsu ワークフローガイド](docs/jujutsu-workflow.md)を参照してください。
+
+**Note**: Jujutsu を使わない場合は、従来通り Git コマンドでの開発も可能です。
 
 ## 開発ワークフロー
 
@@ -206,7 +254,7 @@ main (本番)
 
 ### コミット規約
 
-Conventional Commits + Commitlintを使用：
+Conventional Commits + Commitlint を使用：
 
 ```
 feat: 新機能
@@ -220,5 +268,5 @@ refactor: リファクタリング
 ### 品質ゲート
 
 - Pre-commit: Prettier + ESLint
-- Pre-push: Playwrightクリティカルテスト
-- PR: 全テスト + CodeRabbitレビュー
+- Pre-push: Playwright クリティカルテスト
+- PR: 全テスト + CodeRabbit レビュー

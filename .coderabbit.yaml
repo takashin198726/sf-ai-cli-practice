@@ -1,39 +1,41 @@
-language: 'ja-JP'
-tone_instructions: '親しみやすく、かつ論理的な口調でお願いします。'
-early_access: true
-
+language: 'apex'
 reviews:
-  profile: 'chill'
   request_changes_workflow: false
   high_level_summary: true
   auto_review:
     enabled: true
     ignore_title_keywords:
       - 'WIP'
-      - 'ignore'
+      - 'Draft'
+  path_filters:
+    - '!force-app/main/default/classes/SmartBlueprint.cls'
+    - '!force-app/main/default/classes/SmartBlueprintTest.cls'
+    - '!submodules/**'
 
-  path_instructions:
-    - path: '**'
-      instructions: |
-        あなたは熟練したSalesforceアーキテクト兼開発者です。
-        以下のガイドラインに従ってコードレビューを行ってください。
+instructions: |
+  You are a senior Salesforce developer reviewing Apex code.
+  Focus on:
+  1. Security (SOQL injection, FLS/CRUD checks)
+  2. Performance (Bulkification, Governor Limits)
+  3. Best Practices (Naming conventions, Error handling)
+  4. Test Coverage (Asserts, Positive/Negative cases)
 
-        ## 1. Salesforceガバナンスとセキュリティ (最重要)
-        - **ガバナ制限**: ループ内でのSOQL発行やDML操作は厳禁です。Map化して外に出すよう提案してください。
-        - **セキュリティ**: `with sharing` の有無、CRUD/FLS確認、SOQL/SOSLインジェクションのリスクを確認してください。
-        - **ハードコード**: IDや機密情報のハードコードは指摘し、カスタムラベルやカスタムメタデータの使用を推奨してください。
+  **IMPORTANT: ApexEloquent Usage**
+  We are using the `ApexEloquent` library for SOQL queries.
+  - Encourage the use of `Scribe` and `Eloquent` for building and executing queries instead of raw SOQL strings.
+  - Example:
+    ```apex
+    // Bad
+    List<Account> accs = [SELECT Id, Name FROM Account WHERE Name = :name];
 
-        ## 2. ベストプラクティス
-        - **Apex**: トリガーハンドラーパターンの使用を推奨してください。
-        - **LWC**: DOM操作は極力避け、データバインディングを使用するよう指導してください。`@wire` の適切な使用を確認してください。
+    // Good
+    Scribe scribe = Scribe.source(Account.class)
+        .fields(new List<String>{'Id', 'Name'})
+        .whereEqual('Name', name);
+    List<Account> accs = (List<Account>) new Eloquent().get(scribe);
+    ```
+  - If you see raw SOQL, suggest refactoring to use ApexEloquent unless there is a specific reason not to (e.g., complex subqueries not supported by the library).
 
-        ## 3. テスト戦略 (将来的な構成)
-        - **ユニットテスト**: データ作成には `new Account(...)` ではなく、ライブラリ **`ApexBluePrint`** の使用を推奨してください（導入予定のため）。
-        - **E2Eテスト**: 画面操作のテストには **`Playwright`** の使用を想定した設計になっているか確認してください。
-
-        ## 4. 除外事項
-        - インデント、改行、スペースなどのフォーマットに関しては指摘しないでください（Prettierが担当します）。
-        - 既存のコードベースに対する些細なスタイル指摘は避け、今回の変更点におけるロジックと設計に集中してください。
-
-chat:
-  auto_reply: true
+  **SmartBlueprint Usage**
+  We are using `SmartBlueprint` for test data generation.
+  - Ensure tests use `SmartBlueprint.of(...)` instead of manually creating SObjects.

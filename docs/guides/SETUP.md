@@ -2,7 +2,7 @@
 
 ## 前提条件
 
-- Node.js 20.x以上
+- Node.js 20.x 以上
 - Salesforce CLI
 - Git
 
@@ -22,7 +22,7 @@ npm install
 npx playwright install chromium
 ```
 
-### 3. Salesforce組織認証
+### 3. Salesforce 組織認証
 
 ```bash
 sf org login web --set-default --alias my-org
@@ -49,7 +49,7 @@ npm run test:smoke
 
 ## 開発環境構成
 
-### VSCode拡張機能
+### VSCode 拡張機能
 
 推奨拡張機能は`.vscode/extensions.json`に定義されています：
 
@@ -60,22 +60,22 @@ npm run test:smoke
 
 ### Git Hooks
 
-Huskyによる自動実行：
+Husky による自動実行：
 
 - Pre-commit: Prettier + lint-staged
-- Pre-push: Playwrightクリティカルテスト
+- Pre-push: Playwright クリティカルテスト
 - Commit-msg: Commitlint
 
 ## トラブルシューティング
 
-### Playwright認証エラー
+### Playwright 認証エラー
 
 ```bash
 # 認証を再実行
 npx playwright test playwright/tests/auth.setup.ts
 ```
 
-### Salesforce CLI接続エラー
+### Salesforce CLI 接続エラー
 
 ```bash
 # 組織情報を確認

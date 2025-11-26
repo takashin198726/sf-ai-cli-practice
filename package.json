@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "Salesforce App",
   "scripts": {
-    "lint": "eslint **/{aura,lwc}/**/*.js",
+    "lint": "eslint force-app/main/default/lwc/**/*.js",
     "test": "npm run test:unit",
     "test:unit": "sfdx-lwc-jest",
     "test:unit:watch": "sfdx-lwc-jest --watch",
@@ -28,14 +28,22 @@
     "test:pre-push": "playwright test --grep '@smoke|@critical'",
     "// --- Visual Regression専用 ---": "",
     "test:visual": "playwright test --grep @visual",
-    "test:visual:update": "playwright test --grep @visual --update-snapshots"
+    "test:visual:update": "playwright test --grep @visual --update-snapshots",
+    "// --- Flow Converter ---": "",
+    "flow:bulkify": "node submodules/sf-flow-apex-converter/dist/index.js bulkify",
+    "lint:apex": "sf scanner run --target \"force-app\" --pmdconfig \"ruleset.xml\" --format table",
+    "ci": "bash scripts/ci.sh",
+    "agent:init": "python3 scripts/orchestrator.py --start-phase 1 --end-phase 1",
+    "agent:implement": "python3 scripts/orchestrator.py --start-phase 2 --end-phase 2 --non-interactive",
+    "agent:merge": "python3 scripts/orchestrator.py --start-phase 3 --end-phase 4",
+    "agent:full": "python3 scripts/orchestrator.py"
   },
   "devDependencies": {
     "@commitlint/cli": "^20.1.0",
     "@commitlint/config-conventional": "^20.0.0",
     "@lwc/eslint-plugin-lwc": "^3.1.0",
     "@playwright/test": "^1.56.1",
-    "@prettier/plugin-xml": "^3.4.1",
+    "@prettier/plugin-xml": "^2.2.0",
     "@salesforce/eslint-config-lwc": "^4.0.0",
     "@salesforce/eslint-plugin-aura": "^3.0.0",
     "@salesforce/eslint-plugin-lightning": "^2.0.0",
@@ -48,8 +56,8 @@
     "eslint-plugin-jest": "^28.14.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.1.2",
-    "prettier": "3.6.2",
-    "prettier-plugin-apex": "2.2.6"
+    "prettier": "2.8.8",
+    "prettier-plugin-apex": "1.13.0"
   },
   "lint-staged": {
     "**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}": [
