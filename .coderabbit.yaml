@@ -4,6 +4,9 @@ reviews:
   high_level_summary: true
   auto_review:
     enabled: true
+    drafts: true
+    base_branches:
+      - '**' # Enable auto-review for all base branches
     ignore_title_keywords:
       - 'WIP'
       - 'Draft'
