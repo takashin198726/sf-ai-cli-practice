@@ -1,0 +1,8 @@
+dsn: sf-cli-meta:///Users/takashin/code/sf-ai-cli-practice
+docPath: docs/schema
+format:
+  adjust: false
+  sort: true
+er:
+  format: mermaid
+  skip: false

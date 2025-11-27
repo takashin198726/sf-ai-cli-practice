@@ -1,0 +1,54 @@
+{
+  "tables": [
+    {
+      "name": "Account",
+      "type": "Standard object",
+      "columns": [
+        {
+          "name": "Id",
+          "type": "Id",
+          "nullable": false,
+          "comment": "Id"
+        },
+        {
+          "name": "Name",
+          "type": "Name",
+          "nullable": false
+        }
+      ],
+      "indexes": [
+        {
+          "name": "Id",
+          "def": "Primary Key",
+          "table": "Account",
+          "columns": [
+            "Id"
+          ]
+        },
+        {
+          "name": "Name",
+          "def": "Name",
+          "table": "Account",
+          "columns": [
+            "Name"
+          ]
+        }
+      ],
+      "constraints": [
+        {
+          "name": "Id",
+          "type": "Primary Key",
+          "def": "Primary Key",
+          "table": "Account",
+          "columns": [
+            "Id"
+          ]
+        }
+      ]
+    }
+  ],
+  "driver": {
+    "name": "Salesforce CLI Metadata driver",
+    "database_version": "0"
+  }
+}
