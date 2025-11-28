@@ -1,3 +1,9 @@
 [submodule "submodules/ApexBluePrint"]
 	path = submodules/ApexBluePrint
 	url = https://github.com/krile136/ApexBluePrint.git
+[submodule "submodules/ApexEloquent"]
+	path = submodules/ApexEloquent
+	url = https://github.com/krile136/ApexEloquent.git
+[submodule "submodules/sf-flow-apex-converter"]
+	path = submodules/sf-flow-apex-converter
+	url = https://github.com/cclabsnz/sf-flow-apex-converter.git

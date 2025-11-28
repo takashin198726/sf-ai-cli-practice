@@ -1,0 +1,973 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+    <testsuite name="force.apex" timestamp="2025-11-28T13:44:11.000Z" hostname="https://orgfarm-6a0d3063b2-dev-ed.develop.my.salesforce.com" tests="473" failures="0"  errors="0"  time="22.52">
+        <properties>
+            <property name="outcome" value="Successful"/>
+            <property name="testsRan" value="473"/>
+            <property name="passing" value="473"/>
+            <property name="failing" value="0"/>
+            <property name="skipped" value="0"/>
+            <property name="passRate" value="100%"/>
+            <property name="failRate" value="0%"/>
+            <property name="testStartTime" value="Fri Nov 28 2025 10:44:11 PM"/>
+            <property name="testSetupTimeInMs" value="0"/>
+            <property name="testExecutionTime" value="22.52 s"/>
+            <property name="testTotalTime" value="22.52 s"/>
+            <property name="commandTime" value="0.27 s"/>
+            <property name="hostname" value="https://orgfarm-6a0d3063b2-dev-ed.develop.my.salesforce.com"/>
+            <property name="orgId" value="00DgL00000EdjekUAB"/>
+            <property name="username" value="takashin1987409@agentforce.com"/>
+            <property name="testRunId" value="707gL00000Q2aiY"/>
+            <property name="userId" value="005gL00000ABvI9QAL"/>
+            <property name="coveredLines" value="2718"/>
+            <property name="testRunCoverage" value="94%"/>
+            <property name="orgWideCoverage" value="93%"/>
+        </properties>
+        <testcase name="testBuild_WhenListContainsNull_ThenReturnsInClauseWithNullLiteral" classname="InConditionClauseTest" time="0.07">
+        </testcase>
+        <testcase name="testBuild_WhenListIsEmpty_ThenReturnsAlwaysFalseCondition" classname="InConditionClauseTest" time="0.00">
+        </testcase>
+        <testcase name="testBuild_WhenValueIsIdSet_ThenReturnsInClauseWithQuotes" classname="InConditionClauseTest" time="0.02">
+        </testcase>
+        <testcase name="testBuild_WhenValueIsIntegerList_ThenReturnsInClauseWithoutQuotes" classname="InConditionClauseTest" time="0.02">
+        </testcase>
+        <testcase name="testBuild_WhenValueIsStringList_ThenReturnsInClauseWithQuotes" classname="InConditionClauseTest" time="0.00">
+        </testcase>
+        <testcase name="testImmutability_WhenOverrideField_ThenReturnsNewInstanceWithNewField" classname="InConditionClauseTest" time="0.01">
+        </testcase>
+        <testcase name="testImmutability_WhenOverrideMetaData_ThenReturnsNewInstance" classname="InConditionClauseTest" time="0.01">
+        </testcase>
+        <testcase name="testBuild_WhenValueIsDate_ThenReturnsFormattedDateLiteral" classname="GreaterThanConditionClauseTest" time="0.08">
+        </testcase>
+        <testcase name="testBuild_WhenValueIsDatetime_ThenReturnsFormattedDatetimeLiteral" classname="GreaterThanConditionClauseTest" time="0.03">
+        </testcase>
+        <testcase name="testBuild_WhenValueIsInteger_ThenReturnsConditionWithoutQuotes" classname="GreaterThanConditionClauseTest" time="0.03">
+        </testcase>
+        <testcase name="testBuild_WhenValueIsNull_ThenThrowException" classname="GreaterThanConditionClauseTest" time="0.01">
+        </testcase>
+        <testcase name="testBuild_WhenValueIsString_ThenReturnsConditionWithQuotes" classname="GreaterThanConditionClauseTest" time="0.01">
+        </testcase>
+        <testcase name="testImmutability_WhenOverrideField_ThenReturnsNewInstanceWithNewField" classname="GreaterThanConditionClauseTest" time="0.01">
+        </testcase>
+        <testcase name="testImmutability_WhenOverrideMetaData_ThenReturnsNewInstance" classname="GreaterThanConditionClauseTest" time="0.03">
+        </testcase>
+        <testcase name="tesetGroupByFields_WhenAddEmptyList_ThenThrowException" classname="ScribeTest" time="0.07">
+        </testcase>
+        <testcase name="testAggregateFunctionsInParent_WhenAddAggregateFunctionsToTwoNestedParent_ThenReturnAggregateFunctionsInParent" classname="ScribeTest" time="0.21">
+        </testcase>
+        <testcase name="testAggregateFunctionsInParent_WhenAddDuplicateAliasBetWeenParentAndCurrent_ThenThrowException" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testAggregateFunctions_WhenAddSameAlias_ThenThrowException" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testAllAggregateFunctions_WhenAddAllAggregateFunctions_ThenReturnAllAggregateFunctions" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testAllFields_WhenAddAllFields_ThenAddAllFieldsToSelect" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testAvarage_WhenAddNonExistFieldToAverage_ThenThrowException" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testAverageInParent_WhenAddAverageInParent_ThenReturnAverageInParent" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testAverageInParent_WhenAddTwoNestedAverageInParent_ThenReturnNestedAverageInParent" classname="ScribeTest" time="0.02">
+        </testcase>
+        <testcase name="testAverage_WhenAddAverageField_ThenReturnAverageField" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testAverage_WhenAddNonSupportedFieldToAverage_ThenThrowException" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testBuildFieldStructure_WhenAddField_ThenReturnFieldStructure" classname="ScribeTest" time="0.02">
+        </testcase>
+        <testcase name="testBuildFieldStructure_WhenAddNestedChildrenField_ThenReturnFieldStructureWithNestedChildren" classname="ScribeTest" time="0.03">
+        </testcase>
+        <testcase name="testBuildFieldStructure_WhenAddNestedParentField_ThenReturnFieldStructureWithNestedParentFields" classname="ScribeTest" time="0.09">
+        </testcase>
+        <testcase name="testBuildFieldStructure_WhenAddParentField_ThenReturnFieldStructureWithParentFields" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testBuildFieldStructure_WhenAddWithChildren_ThenReturnFieldStructureWithChildren" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testCountDistinct_WhenAddCountDistinctField_ThenReturnCountDistinctField" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testCountDistinct_WhenAddNonExistFieldToCountDistinct_ThenThrowException" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testCountDistinct_WhenAddNonSupportedFieldToCountDistinct_ThenThrowException" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testCount_WhenAddCountField_ThenReturnCountField" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testCount_WhenAddNonExistFieldToCount_ThenThrowException" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testCount_WhenAddNonSupportedFieldToCount_ThenThrowException" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testEqual_WhenAddAndConditionAfterOrCondition_ThenThrowException" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testEqual_WhenAddOrConditionAfterOrCondition_ThenAddOrCondition" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testEqual_WhenValueIsNotNull_ThenAddEqualCondition" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testEqual_WhenValueIsNull_ThenAddIsNullCondition" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testExcudes_WhenValueIsList_ThenAddExcludesCondition" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testField_WhenAddField_ThenAddFieldToSelect" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testField_WhenAddMultiFieldsUsingFieldMethod_ThenAddFieldsToSelect" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testField_WhenAddNonExistField_ThenThrowException" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testFields_WhenAddList_ThenAddFieldsToSelect" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testForUpdate_WhenAddForUpdate_ThenReturnForUpdateSoql" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testForUpdate_WhenWithOffsetClause_ThenThrowException_1" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testForUpdate_WhenWithOffsetClause_ThenThrowException_2" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testForUpdate_WhenWithOrderByClause_ThenThrowException_1" classname="ScribeTest" time="0.02">
+        </testcase>
+        <testcase name="testForUpdate_WhenWithOrderByClause_ThenThrowException_2" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testGreaterThanOrEqual_WhenValueIsNotNull_ThenAddGreaterThanCondition" classname="ScribeTest" time="0.02">
+        </testcase>
+        <testcase name="testGreaterThanOrEqual_WhenValueIsNull_ThenThrowException" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testGreaterThan_WhenTypeOfValueIsDatetime_ThenAddGreaterThanCondition" classname="ScribeTest" time="0.02">
+        </testcase>
+        <testcase name="testGreaterThan_WhenValueIsNotNull_ThenAddGreaterThanCondition" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testGreaterThan_WhenValueIsNull_ThenThrowException" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testGroupByField_WhenAddGroupByField_ThenReturnGroupByField" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testGroupByField_WhenAddVoidField_ThenThrowException" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testGroupByField_WhenSelectedFieldNotInGroupBy_ThenThrowException" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testGroupByField_WhenUsingAfterWithChildrenMethod_ThenThrownException" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testGroupByField_WhenUsingBeforeWithChildrenMethod_ThenThrownError" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testGroupByFields_WhenAddGroupByFields_ThenReturnGroupByFields" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testGroupByFields_WhenSelectedFieldNotInGroupBy_ThenThrowException" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testGroupByParent_WhenAddNestedParentGroup_ThenReturnNestedParentGroup" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testGroupByParent_WhenAddNonGroupedNestedSelectFields_ThenThrowException" classname="ScribeTest" time="0.02">
+        </testcase>
+        <testcase name="testGroupByParent_WhenAddNonGroupedSelectFields_ThenThrowException" classname="ScribeTest" time="0.04">
+        </testcase>
+        <testcase name="testGroupByParent_WhenAddNonParentScribe_ThenThrowException" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testGroupByParent_WhenAddNull_ThenThrowException" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testGroupByParent_WhenAddParentGroup_ThenReturnGroupByParent" classname="ScribeTest" time="0.02">
+        </testcase>
+        <testcase name="testHavingCondition_WhenAddAggregateFunctionInHavingCondition_ThenThrowException" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testHavingCondition_WhenAddFieldInHavingCondition_ThenThrowException" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testHavingCondition_WhenAddHavingConditionWithNonExistAlias_ThenThrowException" classname="ScribeTest" time="0.02">
+        </testcase>
+        <testcase name="testHavingCondition_WhenAddHavingConditionWithParentField_ThenReturnHavingConditionWithParentField" classname="ScribeTest" time="0.02">
+        </testcase>
+        <testcase name="testHavingCondition_WhenAddHavingCondition_ThenReturnHavingCondition" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testHavingCondition_WhenAddMultiAggregateClauseAndMultiHavingCondition_ThenReturnHavingCondition" classname="ScribeTest" time="0.02">
+        </testcase>
+        <testcase name="testHavingCondition_WhenAddMultiHavingConditionUsingOr_ThenReturnHavingCondition" classname="ScribeTest" time="0.02">
+        </testcase>
+        <testcase name="testHavingCondition_WhenAddMultiHavingCondition_ThenReturnHavingCondition" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testHavingCondition_WhenAddNestedParentHavingCondition_ThenReturnNestedParentHavingCondition" classname="ScribeTest" time="0.03">
+        </testcase>
+        <testcase name="testHavingCondition_WhenHavingNonExistAlias_ThenThrowException" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testHavingCondition_WhenMaxAndCount_ThenMaxIsCastAndCountIsNotCast" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testHavingCondition_WhenNotUsingGroupByMethod_ThenThrowException" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testHavingCondition_WhenWithGroupCondition_ThenReturnGroupedHavingCondition" classname="ScribeTest" time="0.02">
+        </testcase>
+        <testcase name="testIN_WhenUsingSubquery_ThenAddInSubQueryCondition" classname="ScribeTest" time="0.02">
+        </testcase>
+        <testcase name="testIn_WhenUsingSubqueryWithOrCondition_ThenThrowException" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testIn_WhenValueIncludeNull_ThenAddInConditionWithNull" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testIn_WhenValueIsEmptyList_ThenAddConditionThatAlwaysFalse" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testIn_WhenValueIsIdSet_ThenAddInCondition" classname="ScribeTest" time="0.02">
+        </testcase>
+        <testcase name="testIn_WhenValueIsList_ThenAddInCondition" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testIncludes_WhenValueIsList_ThenAddIncludesCondition" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testIsNotNull_WhenFieldIsNotNull_ThenAddIsNotNullCondition" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testIsNull_WhenFieldIsNotNull_ThenAddIsNullCondition" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testLessThanOrEqual_WhenValueIsNotNull_ThenAddLessThanOrEqualCondition" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testLessThanOrEqual_WhenValueIsNull_ThenThrowException" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testLessThan_WhenValueIsNotNull_ThenAddLessThanCondition" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testLessThan_WhenValueIsNull_ThenThrowException" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testLike_WhenValueIsNotNull_ThenAddLikeCondition" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testLike_WhenValueIsNull_ThenThrowException" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testMax_WhenAddMaxField_ThenReturnMaxField" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testMax_WhenAddNonExistFieldToMax_ThenThrowException" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testMax_WhenAddNonSupportedFieldToMax_ThenThrowException" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testMin_WhenAddMinField_ThenReturnMinField" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testMin_WhenAddNonExistFieldToMin_ThenThrowException" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testMin_WhenAddNonSupportedFieldToMin_ThenThrowException" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testNotEqual_WhenValueIsNotNull_ThenAddEqualCondition" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testNotEqual_WhenValueIsNull_ThenAddIsNotNullCondition" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testNotIn_WhenUsingSubqueryWithOrCondition_ThenThrowException" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testNotIn_WhenUsingSubquery_ThenAddNotInSubQueryCondition" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testNotIn_WhenValueIncludeNull_ThenAddNotInConditionWithNull" classname="ScribeTest" time="0.02">
+        </testcase>
+        <testcase name="testNotIn_WhenValueIsEmptyList_ThenIgnoreNotInCondition" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testNotIn_WhenValueIsIdSet_ThenAddNotInCondition" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testNotIn_WhenValueIsList_ThenAddNotInCondition" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testNotLike_WhenValueIsNotNull_ThenAddNotLikeCondition" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testNotLike_WhenValueIsNull_ThenThrowException" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testOffset_WhenAddNegativeOffset_ThenThrowException" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testOffset_WhenAddOffsetOver2000_ThenThrowException" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testOffset_WhenAddOffset_ThenReturnOffsetSoql" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testOrCondition_WhenAddOrConditionAtFirst_ThenThrownException" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testOrderBy_WhenAddBlankField_ThenThrowException" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testOrderBy_WhenAddFieldAndOrderAndNullsOperator_ThenReturnOrderByFieldAndOrderAndNullsOperator" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testOrderBy_WhenAddFieldAndOrder_ThenReturnOrderByFieldAndOrder" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testOrderBy_WhenAddField_ThenReturnOrderByField" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testOrderBy_WhenAddMultipleOrderBy_ThenReturnMultipleOrderBy_1" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testOrderBy_WhenAddMultipleOrderBy_ThenReturnMultipleOrderBy_2" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testOrderBy_WhenaddInvalidNullsOperator_ThenThrowException" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testOrderBy_WhenaddInvalidOrder_ThenThrowException" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testScribeIsImmutableTest" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testSoqlClauseOrder_WhenAddVariousClauses_ThenReturnCorrectClauseOrder_1" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testSoqlClauseOrder_WhenAddVariousClauses_ThenReturnCorrectClauseOrder_2" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testSum_WhenAddNonExistFieldToSum_ThenThrowException" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testSum_WhenAddNonSupportedFieldToSum_ThenThrowException" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testSum_WhenAddSumField_ThenReturnSumField" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testTake_WhenAddTake_ThenReturnLimitSoql" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testTake_WhenAddZeroTake_ThenThrowException" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testThrough_WhenAddInvalidRelationName_ThenThrowException" classname="ScribeTest" time="0.16">
+        </testcase>
+        <testcase name="testThrough_WhenAddOtherScribeType_ThenThrowException" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testThrough_WhenAddRelationName_ThenAddedRelationNameUsed" classname="ScribeTest" time="0.04">
+        </testcase>
+        <testcase name="testThrough_WhenAddThroughScribe_ThenReturnSoqlWithThrough" classname="ScribeTest" time="0.09">
+        </testcase>
+        <testcase name="testThrough_WhenMultiRelationFieldWithSameParentExist_ThenThrowException" classname="ScribeTest" time="1.92">
+        </testcase>
+        <testcase name="testWhereGroup_WhenAddAndConditionAfterOrConditionInGroup_ThenThrowException" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testWhereGroup_WhenAddAndGroupAfterOrGroup_ThenThrowException" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testWhereGroup_WhenAddFieldInGroup_ThenThrowException" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testWhereGroup_WhenAddGroup_ThenAddGroupCondition" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testWhereGroup_WhenAddMultiGroup_ThenAddMultiGroupCondition" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testWhereGroup_WhenAddOrGroup_ThenAddOrGroupCondition" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testWhereGroup_WhenGroupConditionIsEmpty_ThenIgnoreGroupCondition" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testWithChildren_ThenAddWithChildrenCondition_ThenAddWithChildrenCondition" classname="ScribeTest" time="0.05">
+        </testcase>
+        <testcase name="testWithChildren_WhenAddInvalidRelationName_ThenThrowException" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testWithChildren_WhenAddNestedWithChildrenCondition_ThenAddNestedWithChildrenCondition" classname="ScribeTest" time="0.16">
+        </testcase>
+        <testcase name="testWithChildren_WhenAddOverFourNestChildrenUsingOtherScribeInstance_ThenThrowException" classname="ScribeTest" time="0.02">
+        </testcase>
+        <testcase name="testWithChildren_WhenAddOverFourNestChildren_ThenThrowException" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testWithChildren_WhenAddParallelWithChildrenCondition_ThenAddParallelWithChildrenCondition" classname="ScribeTest" time="0.02">
+        </testcase>
+        <testcase name="testWithChildren_WhenAddRelationName_ThenAddedRelationNameUsed" classname="ScribeTest" time="0.02">
+        </testcase>
+        <testcase name="testWithChildren_WhenAddWithChildrenConditionAfterOrCondition_ThenThrowException" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testWithChildren_WhenAggregateInChild_ThenThrowException" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testWithChildren_WhenMultiRelationFieldWithSameParentExist_ThenThrowException" classname="ScribeTest" time="0.03">
+        </testcase>
+        <testcase name="testWithParent_AddOnlyParentConditionUsingAsGroup_ThenErrorThrown" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testWithParent_AddOnlyParentCondition_ThenAddOnlyParentCondition" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testWithParent_WhenAddAndConditionAfterNestedOrParentCondition_ThenErrorThrown" classname="ScribeTest" time="0.05">
+        </testcase>
+        <testcase name="testWithParent_WhenAddAndConditionAfterOrParentCondition_ThenErrorThrown" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testWithParent_WhenAddIgnoreParentCondition_ThenInogreParentCondition" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testWithParent_WhenAddIgnoreParentCondition_ThenInogreParentCondition_2" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testWithParent_WhenAddNestedParent_ThenAddNestedParentCondition" classname="ScribeTest" time="0.02">
+        </testcase>
+        <testcase name="testWithParent_WhenAddOnlyParentFieldUsingAsGroup_ThenErrorThrown" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testWithParent_WhenAddOnlyParentField_ThenAddOnlyParentField" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testWithParent_WhenAddOrConditionAtFirstInParentCondition_ThenAddOrParentCondition" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testWithParent_WhenAddOrConditionParentAsGroup_ThenAddOrConditionParentAsasGroup" classname="ScribeTest" time="0.02">
+        </testcase>
+        <testcase name="testWithParent_WhenAddOrConditionParent_ThenAddOrConditionParent" classname="ScribeTest" time="0.02">
+        </testcase>
+        <testcase name="testWithParent_WhenAddOverFourNestedParentFieldOver_ThenThrowException" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testWithParent_WhenAddParentConditionAfterOrCondition_ThenThrownError" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testWithParent_WhenAddThreeNestedParentOrCondition_ThenAddNestedParentCondition" classname="ScribeTest" time="0.02">
+        </testcase>
+        <testcase name="testWithParent_WhenAddVoidString_ThenThrowException" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testWithParent_WhenAddWithParentCondition_ThenAddWithParentCondition" classname="ScribeTest" time="0.02">
+        </testcase>
+        <testcase name="testWithParent_WhenAddWithParentMultipleConditionByAnotherMethod_ThenAddWithParentMultipleCondition" classname="ScribeTest" time="0.02">
+        </testcase>
+        <testcase name="testWithParent_WhenAddWithParentMultipleCondition_ThenAddWithParentMultipleCondition" classname="ScribeTest" time="0.01">
+        </testcase>
+        <testcase name="testBuild_WhenValueIsDate_ThenReturnsFormattedDateLiteral" classname="GreaterThanOrEqualConditionClauseTest" time="0.03">
+        </testcase>
+        <testcase name="testBuild_WhenValueIsDatetime_ThenReturnsFormattedDatetimeLiteral" classname="GreaterThanOrEqualConditionClauseTest" time="0.01">
+        </testcase>
+        <testcase name="testBuild_WhenValueIsInteger_ThenReturnsConditionWithoutQuotes" classname="GreaterThanOrEqualConditionClauseTest" time="0.01">
+        </testcase>
+        <testcase name="testBuild_WhenValueIsNull_ThenThrowException" classname="GreaterThanOrEqualConditionClauseTest" time="0.00">
+        </testcase>
+        <testcase name="testBuild_WhenValueIsString_ThenReturnsConditionWithQuotes" classname="GreaterThanOrEqualConditionClauseTest" time="0.01">
+        </testcase>
+        <testcase name="testImmutability_WhenOverrideField_ThenReturnsNewInstanceWithNewField" classname="GreaterThanOrEqualConditionClauseTest" time="0.01">
+        </testcase>
+        <testcase name="testImmutability_WhenOverrideMetaData_ThenReturnsNewInstance" classname="GreaterThanOrEqualConditionClauseTest" time="0.01">
+        </testcase>
+        <testcase name="testCompareMatchingLogic" classname="LogicComparatorTest" time="0.18">
+        </testcase>
+        <testcase name="testCompareMismatchingLogic" classname="LogicComparatorTest" time="0.10">
+        </testcase>
+        <testcase name="testBuild_WhenValueIsEmptyList_ThenReturnsEmptyExcludesClause" classname="ExcludeConditionClauseTest" time="0.05">
+        </testcase>
+        <testcase name="testBuild_WhenValueIsStringList_ThenReturnsExcludesClause" classname="ExcludeConditionClauseTest" time="0.01">
+        </testcase>
+        <testcase name="testImmutability_WhenOverrideField_ThenReturnsNewInstanceWithNewField" classname="ExcludeConditionClauseTest" time="0.01">
+        </testcase>
+        <testcase name="testImmutability_WhenOverrideMetaData_ThenReturnsNewInstance" classname="ExcludeConditionClauseTest" time="0.02">
+        </testcase>
+        <testcase name="testConstructor_WhenNoArguments_ThenInstanceCreated" classname="FieldStructureTest" time="0.05">
+        </testcase>
+        <testcase name="testConstructor_WhenWithFieldsAndRelations_ThenInstanceCreatedWithFieldsAndRelations" classname="FieldStructureTest" time="0.00">
+        </testcase>
+        <testcase name="testConstructor_WhenWithFieldsArgument_ThenInstanceCreatedWithFields" classname="FieldStructureTest" time="0.00">
+        </testcase>
+        <testcase name="testGetFieldCount_WhenFieldsExist_ThenReturnsCorrectCount" classname="FieldStructureTest" time="0.00">
+        </testcase>
+        <testcase name="testGetRelationFieldStructure_WhenRelationExists_ThenReturnsFieldStructure" classname="FieldStructureTest" time="0.00">
+        </testcase>
+        <testcase name="testHasField_WhenFieldExists_ThenReturnsTrue" classname="FieldStructureTest" time="0.00">
+        </testcase>
+        <testcase name="testHasRelation_WhenHasRelation_ThenReturnsTrue" classname="FieldStructureTest" time="0.00">
+        </testcase>
+        <testcase name="testBuild_WhenValueIsNull_ThenThrowException" classname="NotLikeConditionClauseTest" time="0.06">
+        </testcase>
+        <testcase name="testBuild_WhenValueIsValidString_ThenReturnsNotLikeClause" classname="NotLikeConditionClauseTest" time="0.01">
+        </testcase>
+        <testcase name="testImmutability_WhenOverrideField_ThenReturnsNewInstanceWithNewField" classname="NotLikeConditionClauseTest" time="0.02">
+        </testcase>
+        <testcase name="testImmutability_WhenOverrideMetaData_ThenReturnsNewInstance" classname="NotLikeConditionClauseTest" time="0.02">
+        </testcase>
+        <testcase name="testGetChildrenByRelationName_WhenChildrenAreNull_ShouldReturnEmptyList" classname="EntryTest" time="0.63">
+        </testcase>
+        <testcase name="testGetChildren_WhenChildObjectNameDoesNotExist_ThenThrowException" classname="EntryTest" time="0.10">
+        </testcase>
+        <testcase name="testGetChildren_WhenChildrenAreNull_ShouldReturnEmptyList" classname="EntryTest" time="0.01">
+        </testcase>
+        <testcase name="testGetId_WhenCalled_ShouldReturnId" classname="EntryTest" time="0.00">
+        </testcase>
+        <testcase name="testGetName_WhenCalled_ShouldReturnName" classname="EntryTest" time="0.00">
+        </testcase>
+        <testcase name="testGetParent_WhenParentExists_ShouldReturnParentEntry" classname="EntryTest" time="0.01">
+        </testcase>
+        <testcase name="testGetParent_WhenParentIdFieldDoesNotExist_ThenThrowException" classname="EntryTest" time="0.00">
+        </testcase>
+        <testcase name="testGetParent_WhenParentIdFieldIsExistButNotReferenceType_ThenThrowException" classname="EntryTest" time="0.01">
+        </testcase>
+        <testcase name="testGetParent_WhenParentIsNull_ThenReturnNull" classname="EntryTest" time="0.00">
+        </testcase>
+        <testcase name="testGetRecord_WhenCalled_ShouldReturnSObject" classname="EntryTest" time="0.00">
+        </testcase>
+        <testcase name="testGetRecord_WhenCalled_ThenReturnSObject" classname="EntryTest" time="0.00">
+        </testcase>
+        <testcase name="testGet_WhenFieldDoesNotExist_ThenThrowException" classname="EntryTest" time="0.00">
+        </testcase>
+        <testcase name="testGet_WhenFieldExists_ShouldReturnFieldValue" classname="EntryTest" time="0.00">
+        </testcase>
+        <testcase name="testGet_WhenGetNonExistAlias_ThenThrowException" classname="EntryTest" time="0.06">
+        </testcase>
+        <testcase name="testGet_WhenGetUserCount_ThenReutnCountResult" classname="EntryTest" time="0.01">
+        </testcase>
+        <testcase name="testPut_WhenCalledOnAggregateResult_ThenThrowException" classname="EntryTest" time="0.01">
+        </testcase>
+        <testcase name="testPut_WhenFieldDoesNotExist_ThenThrowException" classname="EntryTest" time="0.00">
+        </testcase>
+        <testcase name="testPut_WhenFieldExists_ShouldUpdateFieldValue" classname="EntryTest" time="0.00">
+        </testcase>
+        <testcase name="testSetFieldStructure_WhenCalled_ThenThrowException" classname="EntryTest" time="0.00">
+        </testcase>
+        <testcase name="testSetRecord_WhenCalled_ThenSetSObject" classname="EntryTest" time="0.01">
+        </testcase>
+        <testcase name="testBasicQuery" classname="ApexEloquentTest" time="0.49">
+        </testcase>
+        <testcase name="testBuild_WhenValueIsDate_ThenReturnsFormattedDateLiteral" classname="EqualConditionClauseTest" time="0.05">
+        </testcase>
+        <testcase name="testBuild_WhenValueIsDatetime_ThenReturnsFormattedDatetimeLiteral" classname="EqualConditionClauseTest" time="0.00">
+        </testcase>
+        <testcase name="testBuild_WhenValueIsInteger_ThenReturnsConditionWithoutQuotes" classname="EqualConditionClauseTest" time="0.02">
+        </testcase>
+        <testcase name="testBuild_WhenValueIsString_ThenReturnsConditionWithQuotes" classname="EqualConditionClauseTest" time="0.00">
+        </testcase>
+        <testcase name="testImmutability_WhenOverrideField_ThenReturnsNewInstanceWithNewField" classname="EqualConditionClauseTest" time="0.01">
+        </testcase>
+        <testcase name="testImmutability_WhenOverrideMetaData_ThenReturnsNewInstance" classname="EqualConditionClauseTest" time="0.01">
+        </testcase>
+        <testcase name="testDeleteEmptyEntries" classname="EloquentTest" time="0.04">
+        </testcase>
+        <testcase name="testDeleteMultipleEntries" classname="EloquentTest" time="0.06">
+        </testcase>
+        <testcase name="testDeleteMultipleRecords" classname="EloquentTest" time="0.03">
+        </testcase>
+        <testcase name="testDeleteSingleEntry" classname="EloquentTest" time="0.02">
+        </testcase>
+        <testcase name="testDeleteSingleRecord" classname="EloquentTest" time="0.01">
+        </testcase>
+        <testcase name="testFirst" classname="EloquentTest" time="0.04">
+        </testcase>
+        <testcase name="testFirstAsSObject" classname="EloquentTest" time="0.01">
+        </testcase>
+        <testcase name="testFirstOrFail" classname="EloquentTest" time="0.01">
+        </testcase>
+        <testcase name="testFirstOrFailAsSObject" classname="EloquentTest" time="0.01">
+        </testcase>
+        <testcase name="testGet" classname="EloquentTest" time="0.01">
+        </testcase>
+        <testcase name="testGetAggregate_WhenScriveIsAggregate" classname="EloquentTest" time="0.06">
+        </testcase>
+        <testcase name="testGetAsSObject" classname="EloquentTest" time="0.01">
+        </testcase>
+        <testcase name="testGet_WhenScribeIsNotAggregate_ThenThrowException" classname="EloquentTest" time="0.01">
+        </testcase>
+        <testcase name="testInsertMultipleRecords" classname="EloquentTest" time="0.04">
+        </testcase>
+        <testcase name="testInsertSingleRecord" classname="EloquentTest" time="0.01">
+        </testcase>
+        <testcase name="testUpdateEmptyEntries" classname="EloquentTest" time="0.00">
+        </testcase>
+        <testcase name="testUpdateMultipleEntries" classname="EloquentTest" time="0.02">
+        </testcase>
+        <testcase name="testUpdateMultipleRecords" classname="EloquentTest" time="0.02">
+        </testcase>
+        <testcase name="testUpdateSingleEntry" classname="EloquentTest" time="0.01">
+        </testcase>
+        <testcase name="testUpdateSingleRecord" classname="EloquentTest" time="0.01">
+        </testcase>
+        <testcase name="testUpsertEmptyEntries" classname="EloquentTest" time="0.00">
+        </testcase>
+        <testcase name="testUpsertMultipleEntries" classname="EloquentTest" time="0.02">
+        </testcase>
+        <testcase name="testUpsertMultipleRecords" classname="EloquentTest" time="0.02">
+        </testcase>
+        <testcase name="testUpsertSingleEntry" classname="EloquentTest" time="0.02">
+        </testcase>
+        <testcase name="testUpsertSingleRecord" classname="EloquentTest" time="0.02">
+        </testcase>
+        <testcase name="testDoInsertUpdateDelete_WhenExecute_ThenSuccess" classname="DmlOperatorTest" time="2.67">
+        </testcase>
+        <testcase name="testBuild_WhenSubQueryIsValid_ThenReturnsNotInSubQueryClause" classname="NotInSubQueryConditionClauseTest" time="0.14">
+        </testcase>
+        <testcase name="testImmutability_WhenOverrideField_ThenReturnsNewInstanceWithNewField" classname="NotInSubQueryConditionClauseTest" time="0.01">
+        </testcase>
+        <testcase name="testImmutability_WhenOverrideMetaData_ThenReturnsNewInstance" classname="NotInSubQueryConditionClauseTest" time="0.03">
+        </testcase>
+        <testcase name="testBuild_WhenValueIsDate_ThenReturnsFormattedDateLiteral" classname="NotEqualConditionClauseTest" time="0.09">
+        </testcase>
+        <testcase name="testBuild_WhenValueIsDatetime_ThenReturnsFormattedDatetimeLiteral" classname="NotEqualConditionClauseTest" time="0.01">
+        </testcase>
+        <testcase name="testBuild_WhenValueIsInteger_ThenReturnsConditionWithoutQuotes" classname="NotEqualConditionClauseTest" time="0.03">
+        </testcase>
+        <testcase name="testBuild_WhenValueIsNull_ThenReturnsNotNullLiteral" classname="NotEqualConditionClauseTest" time="0.01">
+        </testcase>
+        <testcase name="testBuild_WhenValueIsString_ThenReturnsConditionWithQuotes" classname="NotEqualConditionClauseTest" time="0.01">
+        </testcase>
+        <testcase name="testImmutability_WhenOverrideField_ThenReturnsNewInstanceWithNewField" classname="NotEqualConditionClauseTest" time="0.01">
+        </testcase>
+        <testcase name="testImmutability_WhenOverrideMetaData_ThenReturnsNewInstance" classname="NotEqualConditionClauseTest" time="0.01">
+        </testcase>
+        <testcase name="testBuild_WhenListContainsNull_ThenReturnsNotInClauseWithNullLiteral" classname="NotInConditionClauseTest" time="0.04">
+        </testcase>
+        <testcase name="testBuild_WhenListIsEmpty_ThenReturnsEmptyString" classname="NotInConditionClauseTest" time="0.01">
+        </testcase>
+        <testcase name="testBuild_WhenValueIsIdSet_ThenReturnsNotInClauseWithQuotes" classname="NotInConditionClauseTest" time="0.01">
+        </testcase>
+        <testcase name="testBuild_WhenValueIsIntegerList_ThenReturnsNotInClauseWithoutQuotes" classname="NotInConditionClauseTest" time="0.01">
+        </testcase>
+        <testcase name="testBuild_WhenValueIsStringList_ThenReturnsNotInClauseWithQuotes" classname="NotInConditionClauseTest" time="0.00">
+        </testcase>
+        <testcase name="testImmutability_WhenOverrideField_ThenReturnsNewInstanceWithNewField" classname="NotInConditionClauseTest" time="0.01">
+        </testcase>
+        <testcase name="testImmutability_WhenOverrideMetaData_ThenReturnsNewInstance" classname="NotInConditionClauseTest" time="0.01">
+        </testcase>
+        <testcase name="testAdd_WhenAdd_ReturnNewSOrchestrator" classname="SOrchestratorTest" time="0.06">
+        </testcase>
+        <testcase name="testCreate_WHenAddSingleSBluePrintWithAlias_ThenCanAccessByAlias" classname="SOrchestratorTest" time="0.04">
+        </testcase>
+        <testcase name="testCreate_WhenAddChildrenBeforeParent_ThenInsertInOrder" classname="SOrchestratorTest" time="0.04">
+        </testcase>
+        <testcase name="testCreate_WhenAddCircularReference_ThenThrowException" classname="SOrchestratorTest" time="0.01">
+        </testcase>
+        <testcase name="testCreate_WhenAddInvalidReference_ThenThrowException" classname="SOrchestratorTest" time="0.01">
+        </testcase>
+        <testcase name="testCreate_WhenAddMulitipleParentWithChildren_ThenCreateChildrenToEachParent" classname="SOrchestratorTest" time="1.89">
+        </testcase>
+        <testcase name="testCreate_WhenAddMultiParentAndMultiChildrenWithTimes_ThenInsertAllInOrder_1" classname="SOrchestratorTest" time="0.02">
+        </testcase>
+        <testcase name="testCreate_WhenAddMultiParentAndMultiChildrenWithTimes_ThenInsertAllInOrder_2" classname="SOrchestratorTest" time="0.02">
+        </testcase>
+        <testcase name="testCreate_WhenAddMultipleChildrenWithTimes_ThenInsertAllInOrder" classname="SOrchestratorTest" time="0.02">
+        </testcase>
+        <testcase name="testCreate_WhenAddMultipleParentWithChildrenWithoutAlias_ThenCreateChildrenToEachParent" classname="SOrchestratorTest" time="0.02">
+        </testcase>
+        <testcase name="testCreate_WhenAddMultipleRoots_ThenInsertAllInOrder" classname="SOrchestratorTest" time="0.02">
+        </testcase>
+        <testcase name="testCreate_WhenAddNestedMultipleParentsWithChildren_ThenCreateChildrenToEachParent" classname="SOrchestratorTest" time="0.03">
+        </testcase>
+        <testcase name="testCreate_WhenAddNestedMultipleParentsWithChildren_ThenCreateChildrenToEachParent_2" classname="SOrchestratorTest" time="0.03">
+        </testcase>
+        <testcase name="testCreate_WhenAddNestedMultipleParentsWithChildren_ThenCreateChildrenToEachParent_3" classname="SOrchestratorTest" time="0.07">
+        </testcase>
+        <testcase name="testCreate_WhenAddNestedMultipleParentsWithChildren_ThenCreateChildrenToEachParent_4" classname="SOrchestratorTest" time="0.03">
+        </testcase>
+        <testcase name="testCreate_WhenAddNestedMultipleParentsWithChildren_ThenCreateChildrenToEachParent_5" classname="SOrchestratorTest" time="0.03">
+        </testcase>
+        <testcase name="testCreate_WhenAddParentAndChildrenWithAliasAndUse_ThenInsertInOrder" classname="SOrchestratorTest" time="0.02">
+        </testcase>
+        <testcase name="testCreate_WhenAddParentAndChildrenWithAlias_ThenCanAccessByAlias" classname="SOrchestratorTest" time="0.02">
+        </testcase>
+        <testcase name="testCreate_WhenAddParentAndChildrenWithParentLayerAlias_ThenInsertInOrder" classname="SOrchestratorTest" time="0.02">
+        </testcase>
+        <testcase name="testCreate_WhenAddParentAndChildrenWithParentLayerAlias_ThenInsertInOrder_2" classname="SOrchestratorTest" time="0.02">
+        </testcase>
+        <testcase name="testCreate_WhenAddParentAndChildren_ThenInsertInOrder" classname="SOrchestratorTest" time="0.02">
+        </testcase>
+        <testcase name="testCreate_WhenAddSingleSBluePrint_ThenInsertOneRecord" classname="SOrchestratorTest" time="0.01">
+        </testcase>
+        <testcase name="testCreate_WhenAddUseWithOffset_ThenInsertInORder_2" classname="SOrchestratorTest" time="0.03">
+        </testcase>
+        <testcase name="testCreate_WhenAddUseWithOffset_ThenInsertInOrder_1" classname="SOrchestratorTest" time="0.01">
+        </testcase>
+        <testcase name="testCreate_WhenAmbiousRelationship_ThenThrowException" classname="SOrchestratorTest" time="4.18">
+        </testcase>
+        <testcase name="testCreate_WhenSameAliasInDifferentBluePrint_ThenThrowException" classname="SOrchestratorTest" time="0.02">
+        </testcase>
+        <testcase name="testCreate_WhenSameAliasInSameBluePrint_ThenThrowException" classname="SOrchestratorTest" time="0.02">
+        </testcase>
+        <testcase name="testDoDelete_WhenEntryIsDeleted_ThenNoExceptionThrown" classname="MockEloquentTest" time="0.04">
+        </testcase>
+        <testcase name="testDoDelete_WhenMultipleEntriesAreDeleted_ThenNoExceptionThrown" classname="MockEloquentTest" time="0.01">
+        </testcase>
+        <testcase name="testDoDelete_WhenMultipleRecordsAreDeleted_ThenNoExceptionThrown" classname="MockEloquentTest" time="0.00">
+        </testcase>
+        <testcase name="testDoDelete_WhenRecordIsDeleted_ThenNoExceptionThrown" classname="MockEloquentTest" time="0.00">
+        </testcase>
+        <testcase name="testDoDelete_WhenShouldThrowIsTrueWithDeleteMultipleRecord_ThenThrowException" classname="MockEloquentTest" time="0.00">
+        </testcase>
+        <testcase name="testDoDelete_WhenShouldThrowIsTrue_ThenThrowException" classname="MockEloquentTest" time="0.00">
+        </testcase>
+        <testcase name="testDoInsert_WhenMultipleRecordsAreInserted_ThenReturnRecordsWithIds" classname="MockEloquentTest" time="0.01">
+        </testcase>
+        <testcase name="testDoInsert_WhenRecordIsInserted_ThenReturnRecordWithId" classname="MockEloquentTest" time="0.00">
+        </testcase>
+        <testcase name="testDoInsert_WhenShouldThrowIsTrueWithInsertMultipleRecord_ThenThrowException" classname="MockEloquentTest" time="0.00">
+        </testcase>
+        <testcase name="testDoInsert_WhenShouldThrowIsTrue_ThenThrowException" classname="MockEloquentTest" time="0.00">
+        </testcase>
+        <testcase name="testDoUpdate_WhenApplyEntry_ThenReturnEntry" classname="MockEloquentTest" time="0.01">
+        </testcase>
+        <testcase name="testDoUpdate_WhenMultipleEntriesAreUpdated_ThenReturnEntries" classname="MockEloquentTest" time="0.02">
+        </testcase>
+        <testcase name="testDoUpdate_WhenMultipleRecordsAreUpdated_ThenReturnRecords" classname="MockEloquentTest" time="0.00">
+        </testcase>
+        <testcase name="testDoUpdate_WhenRecordIsUpdated_ThenReturnRecord" classname="MockEloquentTest" time="0.00">
+        </testcase>
+        <testcase name="testDoUpdate_WhenShouldThrowIsTrueWithUpdateMultipleRecord_ThenThrowException" classname="MockEloquentTest" time="0.00">
+        </testcase>
+        <testcase name="testDoUpdate_WhenShouldThrowIsTrue_ThenThrowException" classname="MockEloquentTest" time="0.00">
+        </testcase>
+        <testcase name="testDoUpsert_WhenAddEntry_ThenReturnUpsertedEntry" classname="MockEloquentTest" time="0.00">
+        </testcase>
+        <testcase name="testDoUpsert_WhenAddMultiEntries_ThenReturnUpsertedEntries" classname="MockEloquentTest" time="0.00">
+        </testcase>
+        <testcase name="testDoUpsert_WhenAddMultiRecords_ThenReturnUpsertedRecords" classname="MockEloquentTest" time="0.00">
+        </testcase>
+        <testcase name="testDoUpsert_WhenAddNullEntry_ThenThrowException" classname="MockEloquentTest" time="0.00">
+        </testcase>
+        <testcase name="testDoUpsert_WhenAddNullRecord_ThenThrowException" classname="MockEloquentTest" time="0.00">
+        </testcase>
+        <testcase name="testDoUpsert_WhenAddSObject_ThenReturnUpsertedRecord" classname="MockEloquentTest" time="0.00">
+        </testcase>
+        <testcase name="testFirstAsSObject_WhenShouldThrowIsTrue_ThenThrowException" classname="MockEloquentTest" time="0.01">
+        </testcase>
+        <testcase name="testFirstOrFailAsSObject_WhenEntryExists_ThenReturnFirstEntry" classname="MockEloquentTest" time="0.01">
+        </testcase>
+        <testcase name="testFirstOrFailAsSObject_WhenShouldThrowIsTrue_ThenThrowException" classname="MockEloquentTest" time="0.00">
+        </testcase>
+        <testcase name="testFirstOrFail_WhenEntryExists_ThenReturnFirstEntry" classname="MockEloquentTest" time="0.01">
+        </testcase>
+        <testcase name="testFirstOrFail_WhenFieldisNotSelected_ThenThrowException" classname="MockEloquentTest" time="0.01">
+        </testcase>
+        <testcase name="testFirstOrFail_WhenNoEntries_ThenReturnNull" classname="MockEloquentTest" time="0.01">
+        </testcase>
+        <testcase name="testFirstOrFail_WhenShouldThrowIsTrue_ThenThrowException" classname="MockEloquentTest" time="0.01">
+        </testcase>
+        <testcase name="testFirst_WhenEntryExists_ThenReturnFirstEntry" classname="MockEloquentTest" time="0.01">
+        </testcase>
+        <testcase name="testFirst_WhenFieldisNotSelected_ThenThrowException" classname="MockEloquentTest" time="0.01">
+        </testcase>
+        <testcase name="testFirst_WhenNoEntries_ThenReturnNull" classname="MockEloquentTest" time="0.01">
+        </testcase>
+        <testcase name="testFirst_WhenShouldThrowIsTrue_ThenThrowException" classname="MockEloquentTest" time="0.00">
+        </testcase>
+        <testcase name="testGetAggregate_WhenAccessNonExistAlias_ThenThrowException" classname="MockEloquentTest" time="0.02">
+        </testcase>
+        <testcase name="testGetAggregate_WhenAccessNonSelectedField_ThenThrowException" classname="MockEloquentTest" time="0.01">
+        </testcase>
+        <testcase name="testGetAggregate_WhenAddNestedAggregate_ThenCanAccessFieldAndAliasAsFlatField" classname="MockEloquentTest" time="0.06">
+        </testcase>
+        <testcase name="testGetAggregate_WhenAggregateEntryExist_ThenReturnEntries" classname="MockEloquentTest" time="0.01">
+        </testcase>
+        <testcase name="testGetAggregate_WhenApplyNonAggregateScribe_ThenThrowException" classname="MockEloquentTest" time="0.01">
+        </testcase>
+        <testcase name="testGetAggregate_WhenShouldThrowIsTrue_ThenThrowException" classname="MockEloquentTest" time="0.01">
+        </testcase>
+        <testcase name="testGetAsSObject_WhenEntriesExist_ThenReturnSObjects" classname="MockEloquentTest" time="0.01">
+        </testcase>
+        <testcase name="testGetAsSObject_WhenShouldThrowIsTrue_ThenThrowException" classname="MockEloquentTest" time="0.00">
+        </testcase>
+        <testcase name="testGet_WhenEntriesExist_ThenReturnEntries" classname="MockEloquentTest" time="0.01">
+        </testcase>
+        <testcase name="testGet_WhenEntriesWithChildrenExist_ThenReturnEntriesWithChildren" classname="MockEloquentTest" time="0.25">
+        </testcase>
+        <testcase name="testGet_WhenEntriesWithNestedChildren_ThenReturnEntriesWithNestedChildren" classname="MockEloquentTest" time="0.23">
+        </testcase>
+        <testcase name="testGet_WhenEntryExist_ThenReturnEntries" classname="MockEloquentTest" time="0.01">
+        </testcase>
+        <testcase name="testGet_WhenEntryExitAndUsingMockEntryGenerator_ThenReturnEntries" classname="MockEloquentTest" time="0.01">
+        </testcase>
+        <testcase name="testGet_WhenEntryWithChildrenGetNonSelectedField_ThenThrowException" classname="MockEloquentTest" time="0.01">
+        </testcase>
+        <testcase name="testGet_WhenEntryWithNestedChildrenGetNonSelectedField_ThenThrowException" classname="MockEloquentTest" time="0.03">
+        </testcase>
+        <testcase name="testGet_WhenEntryWithNestedParentExist_ThenReturnNestedEntries" classname="MockEloquentTest" time="0.02">
+        </testcase>
+        <testcase name="testGet_WhenEntryWithNestedParentGetNonSelectedField_ThenThrowException" classname="MockEloquentTest" time="0.01">
+        </testcase>
+        <testcase name="testGet_WhenEntryWithParentExist_ThenReturnNestedEntries" classname="MockEloquentTest" time="0.01">
+        </testcase>
+        <testcase name="testGet_WhenEntryWithParentGetNonSelectedField_ThenThrowException" classname="MockEloquentTest" time="0.01">
+        </testcase>
+        <testcase name="testGet_WhenEntryWithoutChildrenGetChildren_ThenThrowException" classname="MockEloquentTest" time="0.05">
+        </testcase>
+        <testcase name="testGet_WhenEntryWithoutParentGetParent_ThenThrowException" classname="MockEloquentTest" time="0.01">
+        </testcase>
+        <testcase name="testGet_WhenGetNonSelectedField_ThenThrowException" classname="MockEloquentTest" time="0.01">
+        </testcase>
+        <testcase name="testGet_WhenNoEntries_ThenReturnEmptyList" classname="MockEloquentTest" time="0.01">
+        </testcase>
+        <testcase name="testGet_WhenShouldThrowIsTrue_ThenThrowException" classname="MockEloquentTest" time="0.00">
+        </testcase>
+        <testcase name="testAddChildren_WhenAddChild_ThenReturnNewSBluePrintWithChild" classname="SBluePrintTest" time="0.05">
+        </testcase>
+        <testcase name="testAlias_WhenAddAliasWithMinusIntervalValue_ThenThrowException" classname="SBluePrintTest" time="0.01">
+        </testcase>
+        <testcase name="testAlias_WhenAddAliasWithMinusStartAtValue_ThenThrowException" classname="SBluePrintTest" time="0.01">
+        </testcase>
+        <testcase name="testAlias_WhenAddAliasWithStartAtAndInterval_ThenReturnNewSBluePrintWithAlias" classname="SBluePrintTest" time="0.01">
+        </testcase>
+        <testcase name="testAlias_WhenAddAliasWithStartAt_ThenReturnNewSBluePrintWithAlias" classname="SBluePrintTest" time="0.01">
+        </testcase>
+        <testcase name="testAlias_WhenAddAlias_ThenReturnNewSBluePrintWithAlias" classname="SBluePrintTest" time="0.01">
+        </testcase>
+        <testcase name="testAlias_WhenAliasIsNull_ThenThrowException" classname="SBluePrintTest" time="0.01">
+        </testcase>
+        <testcase name="testOf_WhenAddRecordType_ThenCreateSBluePrint" classname="SBluePrintTest" time="0.01">
+        </testcase>
+        <testcase name="testOf_WhenRecordTypeIsNotSObject_ThenThrowException" classname="SBluePrintTest" time="0.01">
+        </testcase>
+        <testcase name="testOf_WhenRecordTypeIsNull_ThenThrowException" classname="SBluePrintTest" time="0.01">
+        </testcase>
+        <testcase name="testParentIdField_WhenAddParentIdField_ThenReturnNewSBluePrintWithParentIdField" classname="SBluePrintTest" time="0.01">
+        </testcase>
+        <testcase name="testSet_WhenAddFieldValue_ThenReturnNewSBluePrintWithFieldValue" classname="SBluePrintTest" time="0.01">
+        </testcase>
+        <testcase name="testSet_WhenAddWithStartAtAndInterval_ThenReturnNewSBluePrintWithFieldValue" classname="SBluePrintTest" time="0.01">
+        </testcase>
+        <testcase name="testSet_WhenAddWithStartAt_ThenReturnNewSBluePrintWithFieldValue" classname="SBluePrintTest" time="0.01">
+        </testcase>
+        <testcase name="testSet_WhendAddWithMinusIntervalValue_ThenThrowException" classname="SBluePrintTest" time="0.01">
+        </testcase>
+        <testcase name="testSet_WhendAddWithMinusStartAtValue_ThenThrowException" classname="SBluePrintTest" time="0.01">
+        </testcase>
+        <testcase name="testTemplate_WhenAddTemplateAfterSet_ThenReturnNewInstanceWithTemplateValue" classname="SBluePrintTest" time="0.01">
+        </testcase>
+        <testcase name="testTemplate_WhenAddTemplate_ThenReturnNewSBluePrint" classname="SBluePrintTest" time="0.01">
+        </testcase>
+        <testcase name="testTimes_WhenAddTimes_ThenReturnNewSBluePrintWithInsertNumber" classname="SBluePrintTest" time="0.01">
+        </testcase>
+        <testcase name="testUse_WhenAddUseAliasWIthStartAtAndInterval_ThenReturnNewSBluePrintWithUseAlias" classname="SBluePrintTest" time="0.01">
+        </testcase>
+        <testcase name="testUse_WhenAddUseAliasWithMinusIntervalValue_ThenThrowException" classname="SBluePrintTest" time="0.09">
+        </testcase>
+        <testcase name="testUse_WhenAddUseAliasWithMinusStartAtValue_ThenThrowException" classname="SBluePrintTest" time="0.01">
+        </testcase>
+        <testcase name="testUse_WhenAddUseAliasWithStartAt_ThenReturnNewSBluePrintWithUseAlias" classname="SBluePrintTest" time="0.01">
+        </testcase>
+        <testcase name="testUse_WhenAddUseAlias_ThenReturnNewSBluePrintWithUseAlias" classname="SBluePrintTest" time="0.01">
+        </testcase>
+        <testcase name="testUse_WhenAliasIsNull_ThenThrowException" classname="SBluePrintTest" time="0.01">
+        </testcase>
+        <testcase name="testUse_WhenFromFieldIsNull_ThenThrowException" classname="SBluePrintTest" time="0.01">
+        </testcase>
+        <testcase name="testUse_WhenToFieldIsNull_ThenThrowException" classname="SBluePrintTest" time="0.01">
+        </testcase>
+        <testcase name="TestConstructor_WhenApplySObjectAndFieldStructureAndFieldToValue_ThenMockEntryCreated" classname="MockEntryTest" time="0.08">
+        </testcase>
+        <testcase name="testAddChildren_WhenAddChildren_ThenGetChildren" classname="MockEntryTest" time="0.56">
+        </testcase>
+        <testcase name="testAddParent_WhenAddParent_ThenGetParent" classname="MockEntryTest" time="0.03">
+        </testcase>
+        <testcase name="testAdd_WhenAddFieldAndValue_ThenGetFieldValue" classname="MockEntryTest" time="0.01">
+        </testcase>
+        <testcase name="testAutoId_WhenUsingAutoIdWithInteger_ThenGenerateId" classname="MockEntryTest" time="0.01">
+        </testcase>
+        <testcase name="testAutoId_WhenUsingAutoIdWithMinusInteger_ThenThrowException" classname="MockEntryTest" time="0.01">
+        </testcase>
+        <testcase name="testAutoId_WhenUsingAutoId_ThenGenerateId" classname="MockEntryTest" time="0.01">
+        </testcase>
+        <testcase name="testConstructor_WhenApplyOnlyFieldToValue_ThenMockEntryCreated" classname="MockEntryTest" time="0.01">
+        </testcase>
+        <testcase name="testConstructor_WhenApplySObjectAndFieldStructure_ThenMockEntryCreated" classname="MockEntryTest" time="0.01">
+        </testcase>
+        <testcase name="testConstructor_WhenApplySObjectAndFieldToValue_ThenMockEntryCreated" classname="MockEntryTest" time="0.01">
+        </testcase>
+        <testcase name="testConstructor_WhenApplySObject_ThenMockEntryCreated" classname="MockEntryTest" time="0.01">
+        </testcase>
+        <testcase name="testGetChildrenByRelationName_WhenRelationNameIsInvalid_ThenThrowException" classname="MockEntryTest" time="0.01">
+        </testcase>
+        <testcase name="testGetChildrenByRelationName_WhenRelationNameIsValid_ThenReturnChildEntries" classname="MockEntryTest" time="0.01">
+        </testcase>
+        <testcase name="testGetChildren_WhenChildObjectDoesNotExist_ThenReturnEmptyList" classname="MockEntryTest" time="0.02">
+        </testcase>
+        <testcase name="testGetChildren_WhenChildObjectFieldDoesNotSelected_ThenThrowException" classname="MockEntryTest" time="0.02">
+        </testcase>
+        <testcase name="testGetChildren_WhenChildrenExist_ThenReturnChildEntries" classname="MockEntryTest" time="0.02">
+        </testcase>
+        <testcase name="testGetChildren_WhenChildrenObjectIsNotIEntry_ThenThrowError" classname="MockEntryTest" time="0.02">
+        </testcase>
+        <testcase name="testGetChildren_WhenNestedChildrenExist_ThenReturnNestedChildEntries" classname="MockEntryTest" time="0.12">
+        </testcase>
+        <testcase name="testGetId_WhenCalled_ThenReturnId" classname="MockEntryTest" time="0.01">
+        </testcase>
+        <testcase name="testGetId_WhenIdFieldDoesNotSelected_ThenThrowException" classname="MockEntryTest" time="0.01">
+        </testcase>
+        <testcase name="testGetName_WhenCalled_ThenReturnName" classname="MockEntryTest" time="0.01">
+        </testcase>
+        <testcase name="testGetName_WhenNameFieldDoesNotSelected_ThenThrowException" classname="MockEntryTest" time="0.01">
+        </testcase>
+        <testcase name="testGetParent_WhenFieldStructureDoesNotHaveParentIdFiled_ThenThrowException" classname="MockEntryTest" time="0.01">
+        </testcase>
+        <testcase name="testGetParent_WhenNestedParentExists_ThenReturnNestedParentEntry" classname="MockEntryTest" time="0.07">
+        </testcase>
+        <testcase name="testGetParent_WhenParentIsOverride_ThenReturnParentEntry" classname="MockEntryTest" time="0.01">
+        </testcase>
+        <testcase name="testGetParent_WhenParentNotExist_ThenReturnNull" classname="MockEntryTest" time="0.01">
+        </testcase>
+        <testcase name="testGetRecord_WhenAddNonExistFieldValue_ThenIgnoreNonExistField" classname="MockEntryTest" time="0.01">
+        </testcase>
+        <testcase name="testGetRecord_WhenCalled_ThenReturnRecord" classname="MockEntryTest" time="0.01">
+        </testcase>
+        <testcase name="testGetThroughByRelationName_WhenRelationIsValid_ThenReturnRelatedObject" classname="MockEntryTest" time="0.03">
+        </testcase>
+        <testcase name="testGetThrough_WhenRelationIsValid_ThenReturnRelatedObject" classname="MockEntryTest" time="0.02">
+        </testcase>
+        <testcase name="testGet_WhenFieldExists_ThenReturnFieldValue" classname="MockEntryTest" time="0.01">
+        </testcase>
+        <testcase name="testGet_WhenFieldValueIsOverride_ThenReturnOverrideValue" classname="MockEntryTest" time="0.01">
+        </testcase>
+        <testcase name="testGet_WhenGetExistFieldAndAliasInFieldToValue_ThenReturnValue" classname="MockEntryTest" time="0.03">
+        </testcase>
+        <testcase name="testGet_WhenGetNotExistAliasInAggregateScribe_ThenThrowException" classname="MockEntryTest" time="0.01">
+        </testcase>
+        <testcase name="testGet_WhenGetNotExistAliasInFieldToValue_ThenThrowException" classname="MockEntryTest" time="0.02">
+        </testcase>
+        <testcase name="testGet_WhenGetNotExistFieldInAggregateScribe_ThenThrowException" classname="MockEntryTest" time="0.01">
+        </testcase>
+        <testcase name="testGet_WhenGetNotExistFieldInFieldToValue_ThenThrowException" classname="MockEntryTest" time="0.01">
+        </testcase>
+        <testcase name="testGet_WhenScriceDoesNotSelectField_ThenThrowException" classname="MockEntryTest" time="0.01">
+        </testcase>
+        <testcase name="testOf_WhenAddSobjectType_ThenReturnMockEntry" classname="MockEntryTest" time="0.01">
+        </testcase>
+        <testcase name="testPut_WhenPutAggregateResult_ThenThrowException" classname="MockEntryTest" time="0.01">
+        </testcase>
+        <testcase name="testPut_WhenPutFieldValue_ThenGetFieldValue" classname="MockEntryTest" time="0.01">
+        </testcase>
+        <testcase name="testPut_WhenPutNonEditableField_ThenThrowException" classname="MockEntryTest" time="0.01">
+        </testcase>
+        <testcase name="testPut_WhenPutNonExistField_ThenThrowException" classname="MockEntryTest" time="0.01">
+        </testcase>
+        <testcase name="testPut_WhenPutNonSelectedField_ThenCanGetFieldValue" classname="MockEntryTest" time="0.01">
+        </testcase>
+        <testcase name="testSetFieldStructure_WhenCalled_ThenReturnNewMockEntryWithFieldStructure" classname="MockEntryTest" time="0.01">
+        </testcase>
+        <testcase name="testSetRecord_WhenCalled_ThenReturnNewMockEntry" classname="MockEntryTest" time="0.01">
+        </testcase>
+        <testcase name="testTimes_WhenAddAmountTimesWithStartAt_ThenReturnMOckEntriesWithAmountTimes" classname="MockEntryTest" time="0.01">
+        </testcase>
+        <testcase name="testTimes_WhenAddIdTimesWithStartAt_ThenReturnMockEntriesWithIdTimes" classname="MockEntryTest" time="0.01">
+        </testcase>
+        <testcase name="testTimes_WhenAddIdTimes_ThenReturnMockEntriesWithIdTimes" classname="MockEntryTest" time="0.01">
+        </testcase>
+        <testcase name="testTimes_WhenAddNameTimesWithStartAt_ThenReturnMockEntriesWithNameTimes" classname="MockEntryTest" time="0.01">
+        </testcase>
+        <testcase name="testTimes_WhenAddNameTimes_ThenReturnMockEntriesWithNameTimes" classname="MockEntryTest" time="0.01">
+        </testcase>
+        <testcase name="testTimes_WhenUsingLowercaseLetterAtIdWithStartAt_ThenReturnConsectiveLowercaseLetterIds" classname="MockEntryTest" time="0.01">
+        </testcase>
+        <testcase name="testTimes_WhenUsingLowercaseLetterAtId_ThenReturnConsectiveLowercaseLetterIds" classname="MockEntryTest" time="0.01">
+        </testcase>
+        <testcase name="testTimes_WhenUsingLowercaseLetterWithStartAt_ThenReturnConsecutiveLowercaseLetters" classname="MockEntryTest" time="0.01">
+        </testcase>
+        <testcase name="testTimes_WhenUsingLowercaseLetter_ThenReturnConsecutiveLowercaseLetters" classname="MockEntryTest" time="0.01">
+        </testcase>
+        <testcase name="testTimes_WhenUsingUppercaseLetterAtIdWithStartAt_ThenReturnConsectiveUppercaseLetterIds" classname="MockEntryTest" time="0.02">
+        </testcase>
+        <testcase name="testTimes_WhenUsingUppercaseLetterAtId_ThenReturnConsectiveUppercaseLetterIds" classname="MockEntryTest" time="0.01">
+        </testcase>
+        <testcase name="testTimes_WhenUsingUppercaseLetterWithStartAt_ThenReturnConsecutiveUppercaseLetters" classname="MockEntryTest" time="0.01">
+        </testcase>
+        <testcase name="testTimes_WhenUsingUppercaseLetter_ThenReturnConsecutiveUppercaseLetters" classname="MockEntryTest" time="0.01">
+        </testcase>
+        <testcase name="testBuild_WhenValueIsNull_ThenThrowException" classname="LikeConditionClauseTest" time="0.04">
+        </testcase>
+        <testcase name="testBuild_WhenValueIsValidString_ThenReturnsLikeClause" classname="LikeConditionClauseTest" time="0.01">
+        </testcase>
+        <testcase name="testImmutability_WhenOverrideField_ThenReturnsNewInstanceWithNewField" classname="LikeConditionClauseTest" time="0.01">
+        </testcase>
+        <testcase name="testImmutability_WhenOverrideMetaData_ThenReturnsNewInstance" classname="LikeConditionClauseTest" time="0.01">
+        </testcase>
+        <testcase name="testDoInsert_WhenExecute_ThenSuccess" classname="MockDmlOperatorTest" time="0.03">
+        </testcase>
+        <testcase name="testBuild_WhenValueIsDate_ThenReturnsFormattedDateLiteral" classname="LessThanConditionClauseTest" time="0.08">
+        </testcase>
+        <testcase name="testBuild_WhenValueIsDatetime_ThenReturnsFormattedDatetimeLiteral" classname="LessThanConditionClauseTest" time="0.21">
+        </testcase>
+        <testcase name="testBuild_WhenValueIsInteger_ThenReturnsConditionWithoutQuotes" classname="LessThanConditionClauseTest" time="0.03">
+        </testcase>
+        <testcase name="testBuild_WhenValueIsNull_ThenThrowException" classname="LessThanConditionClauseTest" time="0.01">
+        </testcase>
+        <testcase name="testBuild_WhenValueIsString_ThenReturnsConditionWithQuotes" classname="LessThanConditionClauseTest" time="0.01">
+        </testcase>
+        <testcase name="testImmutability_WhenOverrideField_ThenReturnsNewInstanceWithNewField" classname="LessThanConditionClauseTest" time="0.01">
+        </testcase>
+        <testcase name="testImmutability_WhenOverrideMetaData_ThenReturnsNewInstance" classname="LessThanConditionClauseTest" time="0.03">
+        </testcase>
+        <testcase name="testBuild_WhenValueIsDate_ThenReturnsFormattedDateLiteral" classname="LessThanOrEqualConditionClauseTest" time="0.03">
+        </testcase>
+        <testcase name="testBuild_WhenValueIsDatetime_ThenReturnsFormattedDatetimeLiteral" classname="LessThanOrEqualConditionClauseTest" time="0.01">
+        </testcase>
+        <testcase name="testBuild_WhenValueIsInteger_ThenReturnsConditionWithoutQuotes" classname="LessThanOrEqualConditionClauseTest" time="0.01">
+        </testcase>
+        <testcase name="testBuild_WhenValueIsNull_ThenThrowException" classname="LessThanOrEqualConditionClauseTest" time="0.01">
+        </testcase>
+        <testcase name="testBuild_WhenValueIsString_ThenReturnsConditionWithQuotes" classname="LessThanOrEqualConditionClauseTest" time="0.01">
+        </testcase>
+        <testcase name="testImmutability_WhenOverrideField_ThenReturnsNewInstanceWithNewField" classname="LessThanOrEqualConditionClauseTest" time="0.01">
+        </testcase>
+        <testcase name="testImmutability_WhenOverrideMetaData_ThenReturnsNewInstance" classname="LessThanOrEqualConditionClauseTest" time="0.01">
+        </testcase>
+        <testcase name="testBuild_WhenCalled_ThenReturnsIsNotNullCondition" classname="IsNotNullConditionClauseTest" time="0.08">
+        </testcase>
+        <testcase name="testImmutability_WhenOverrideField_ThenReturnsNewInstanceWithNewField" classname="IsNotNullConditionClauseTest" time="0.01">
+        </testcase>
+        <testcase name="testImmutability_WhenOverrideMetaData_ThenReturnsNewInstance" classname="IsNotNullConditionClauseTest" time="0.03">
+        </testcase>
+        <testcase name="testBuild_WhenCalled_ThenReturnsIsNullCondition" classname="IsNullConditionClauseTest" time="0.02">
+        </testcase>
+        <testcase name="testImmutability_WhenOverrideField_ThenReturnsNewInstanceWithNewField" classname="IsNullConditionClauseTest" time="0.00">
+        </testcase>
+        <testcase name="testImmutability_WhenOverrideMetaData_ThenReturnsNewInstance" classname="IsNullConditionClauseTest" time="0.01">
+        </testcase>
+        <testcase name="testBuild_WhenSubQueryIsValid_ThenReturnsInSubQueryClause" classname="InSubQueryConditionClauseTest" time="0.10">
+        </testcase>
+        <testcase name="testImmutability_WhenOverrideField_ThenReturnsNewInstanceWithNewField" classname="InSubQueryConditionClauseTest" time="0.01">
+        </testcase>
+        <testcase name="testImmutability_WhenOverrideMetaData_ThenReturnsNewInstance" classname="InSubQueryConditionClauseTest" time="0.02">
+        </testcase>
+        <testcase name="testSmartBlueprintCaseComment" classname="SmartBlueprintTest" time="0.49">
+        </testcase>
+        <testcase name="testSmartBlueprintOpportunity" classname="SmartBlueprintTest" time="0.16">
+        </testcase>
+        <testcase name="testSmartBlueprintOverride" classname="SmartBlueprintTest" time="0.21">
+        </testcase>
+        <testcase name="testSmartBlueprintPopulatesRequiredFields" classname="SmartBlueprintTest" time="0.12">
+        </testcase>
+        <testcase name="testBuild_WhenValueIsEmptyList_ThenReturnsEmptyIncludesClause" classname="IncludesConditionClauseTest" time="0.02">
+        </testcase>
+        <testcase name="testBuild_WhenValueIsStringList_ThenReturnsIncludesClause" classname="IncludesConditionClauseTest" time="0.00">
+        </testcase>
+        <testcase name="testImmutability_WhenOverrideField_ThenReturnsNewInstanceWithNewField" classname="IncludesConditionClauseTest" time="0.00">
+        </testcase>
+        <testcase name="testImmutability_WhenOverrideMetaData_ThenReturnsNewInstance" classname="IncludesConditionClauseTest" time="0.01">
+        </testcase>
+    </testsuite>
+</testsuites>

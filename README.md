@@ -15,6 +15,8 @@ Salesforce CLI (sfコマンド) を使用した基本的なソースコード管
 | **Testing**    | **ApexBluePrint**      | テストデータ生成ライブラリ（Data Factory）。複雑な関連データを1行で作成可能です。        |
 | **CI/CD**      | **sfdx-git-delta**     | 差分デプロイメントツール。変更されたメタデータのみを抽出してデプロイ・テストします。     |
 | **Governance** | **Husky / Commitlint** | Gitフックとコミットメッセージの規約（Conventional Commits）を強制します。                |
+| **Testing**    | **ApexEloquent**       | テストデータ生成ライブラリ。Eloquent パターンで簡潔にテストデータを作成します。           |
+| **Flow Migration** | **sf-flow-apex-converter** | FlowをApexに変換するツール。AI操作しやすいApexベースの開発を実現します。 |
 
 ## 📦 前提条件 (Prerequisites)
 
