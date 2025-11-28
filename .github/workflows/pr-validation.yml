@@ -20,18 +20,36 @@ jobs:
       - name: Install sfdx-git-delta
         run: echo "y" | sf plugins install sfdx-git-delta
 
+      - name: Authenticate to Salesforce
+        run: |
+          echo "${{ secrets.SERVER_KEY }}" | base64 --decode > server.key
+          sf org login jwt \
+            --client-id ${{ secrets.SF_CONSUMER_KEY }} \
+            --jwt-key-file server.key \
+            --username ${{ secrets.SF_USERNAME }} \
+            --alias ci-org \
+            --set-default
+
       - name: Generate Delta Packages
         run: |
           mkdir changed-sources
           sf sgd:source:delta --to "HEAD" --from "HEAD^" --output-dir changed-sources/ --generate-delta
+
+      - name: Run Apex Tests
+        if: hashFiles('changed-sources/package/package.xml') != ''
+        run: |
+          echo "Running Apex tests for changed components..."
+          sf apex run test --test-level RunLocalTests \
+            --result-format human \
+            --code-coverage \
+            --wait 10
 
       - name: Validate Metadata (CheckOnly)
         run: |
           if [ -s changed-sources/package/package.xml ]; then
             echo "Deploying delta changes..."
             cat changed-sources/package/package.xml
-            # 認証設定が完了したら、以下のコメントアウトを外して実際に検証デプロイします
-            # sf project deploy start -x changed-sources/package/package.xml --dry-run
+            sf project deploy start -x changed-sources/package/package.xml --dry-run
           else
             echo "No metadata changes found."
           fi
